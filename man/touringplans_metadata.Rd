@@ -7,196 +7,196 @@
 \format{
 A data frame with 2079 rows and 181 variables:
 \describe{
-\item{DATE}{Park Day (not actual date stamp of the wait time, since some are after midnight), Date}
-\item{WDW_TICKET_SEASON}{Walt Disney World Single Day Price Type, alphanumeric}
-\item{DAYOFWEEK}{Day of Week, numeric}
-\item{DAYOFYEAR}{Day of Year (0 to 365), numeric}
-\item{WEEKOFYEAR}{Week of Year (0 to 53), numeric}
-\item{MONTHOFYEAR}{Month of Year (1 to 12), numeric}
-\item{YEAR}{Year, numeric}
-\item{SEASON}{Seasonal Category (Fall, Winter, Thanksgiving, etc.), alphanumeric}
-\item{HOLIDAYPX}{Proximity to Holiday (2-directional) (in days), numeric}
-\item{HOLIDAYM}{Holiday Metric (1 to 5 ranking), numeric}
-\item{HOLIDAYN}{Name of Holiday, alphanumeric}
-\item{HOLIDAY}{Day is a Holiday, Boolean}
-\item{WDWTICKETSEASON}{WDW 1-day ticket season, alphanumeric}
-\item{WDWRaceN}{XXX Event Code, alphanumeric}
-\item{WDWeventN}{XXX Event Code, alphanumeric}
-\item{WDWevent}{WDW Event, Boolean}
-\item{WDWrace}{WDW Race, Boolean}
-\item{WDWSEASON}{WDW Season, alphanumeric}
-\item{WDWMAXTEMP}{WDW Max Temperature, numeric}
-\item{WDWMINTEMP}{WDW Min Temperature, numeric}
-\item{WDWMEANTEMP}{WDW Average Temperature, numeric}
-\item{MKeventN}{Magic Kingdom Event Code, alphanumeric}
-\item{MKevent}{Magic Kingdom Event, Boolean}
-\item{EPeventN}{Epcot Event Code, alphanumeric}
-\item{EPevent}{Epcot Event, Boolean}
-\item{HSeventN}{Hollywood Studios Event Code, alphanumeric}
-\item{HSevent}{Hollywood Studios Event, Boolean}
-\item{AKeventN}{Animal Kingdom Event Code, alphanumeric}
-\item{AKevent}{Animal Kingdom Event, Boolean}
-\item{HOLIDAYJ}{Name of Jewish Holiday, alphanumeric}
-\item{INSESSION}{Percentage of Schools in Session, numeric}
-\item{INSESSION_ENROLLMENT}{Percentage of Schools in Session Weighted by Enrollment, numeric}
-\item{INSESSION_WDW}{Percentage of Schools in Session WDW markets only, numeric}
-\item{INSESSION_DLR}{Percentage of Schools in Session DLR markets only, numeric}
-\item{INSESSION_SQRT_WDW}{Percentage of Schools in Session Weighted by Square Root of Distance to WDW, numeric}
-\item{INSESSION_SQRT_DLR}{Percentage of Schools in Session Weighted by Square Root of Distance to DLR, numeric}
-\item{INSESSION_CALIFORNIA}{Percentage of Schools in Session California Only, numeric}
-\item{INSESSION_DC}{Percentage of Schools in Session D.C. Only, numeric}
-\item{inSession_Central_FL}{Percentage of Schools in Session Within Central Florida Only, numeric}
-\item{INSESSION_DRIVE1_FL}{Percentage of Schools in Session Within Driving Distance to Florida Only, numeric}
-\item{INSESSION_DRIVE2_FL}{Percentage of Schools in Session Within Driving Distance to Florida Only, numeric}
-\item{INSESSION_DRIVE_CA}{Percentage of Schools in Session Within Driving Distance to California Only, numeric}
-\item{INSESSION_FLORIDA}{Percentage of Schools in Session Florida Only, numeric}
-\item{INSESSION_MARDI_GRAS}{Percentage of Schools in Session Mardi Gras States Only, numeric}
-\item{INSESSION_MIDWEST}{Percentage of Schools in Session Midwest Only, numeric}
-\item{INSESSION_NY_NJ}{Percentage of Schools in Session New York and New Jersey Only, numeric}
-\item{INSESSION_NY_NJ_PA}{Percentage of Schools in Session New York, New Jersey and Pennsylvania Only, numeric}
-\item{INSESSION_NEW_ENGLAND}{Percentage of Schools in Session New England Only, numeric}
-\item{INSESSION_NEW_JERSEY}{Percentage of Schools in Session New Jersey Only, numeric}
-\item{INSESSION_NOTHWEST}{Percentage of Schools in Session Northwest Only, numeric}
-\item{INSESSION_PLANES}{Percentage of Schools in Session Planes Only, numeric}
-\item{INSESSION_SOCAL}{Percentage of Schools in Session Southern California Only, numeric}
-\item{INSESSION_SOUTHWEST}{Percentage of Schools in Session Southwest Only, numeric}
-\item{SUNSET_WDW}{Time of Sunset in Orlando, HH:MM}
-\item{MKEMHMORN}{Magic Kingdom Extra Magic Hour Morning, Boolean}
-\item{MKEMHMYEST}{Magic Kingdom Extra Magic Hour Morning Yesterday, Boolean}
-\item{MKEMHMTOM}{Magic Kingdom Extra Magic Hour Morning Tomorrow, Boolean}
-\item{MKEMHEVE}{Magic Kingdom Extra Magic Hour Evening, Boolean}
-\item{MKHOURSEMH}{Total Opening Hours including EMH for Magic Kingdom, numeric}
-\item{MKHOURSEMHYEST}{Yesterday\'s Total Opening Hours including EMH for Magic Kingdom, numeric}
-\item{MKHOURSEMHTOM}{Tomorrow\'s Total Opening Hours including EMH for Magic Kingdom, numeric}
-\item{MKEMHEYEST}{Magic Kingdom Extra Magic Hour Evening Yesterday, Boolean}
-\item{MKEMHETOM}{Magic Kingdom Extra Magic Hour Evening Tomorrow, Boolean}
-\item{EPEMHMORN}{Epcot Extra Magic Hour Morning, Boolean}
-\item{EPEMHMYEST}{Epcot Extra Magic Hour Morning Yesterday, Boolean}
-\item{EPEMHMTOM}{Epcot Extra Magic Hour Morning Tomorrow, Boolean}
-\item{EPEMHEVE}{Epcot Extra Magic Hour Evening, Boolean}
-\item{EPEMHEYEST}{Epcot Extra Magic Hour Evening Yesterday, Boolean}
-\item{EPEMHETOM}{Epcot Extra Magic Hour Evening Tomorrow, Boolean}
-\item{EPHOURSEMH}{Total Opening Hours including EMH for Epcot, numeric}
-\item{EPHOURSEMHYEST}{Yesterday\'s Total Opening Hours including EMH for Epcot, numeric}
-\item{EPHOURSEMHTOM}{Tomorrow\'s Total Opening Hours including EMH for Epcot, numeric}
-\item{HSEMHMORN}{Hollywood Studios Extra Magic Hour Morning, Boolean}
-\item{HSEMHMYEST}{Hollywood Studios Extra Magic Hour Morning Yesterday, Boolean}
-\item{HSEMHMTOM}{Hollywood Studios Extra Magic Hour Morning Tomorrow, Boolean}
-\item{HSEMHEVE}{Hollywood Studios Extra Magic Hour Evening, Boolean}
-\item{HSEMHEYEST}{Hollywood Studios Extra Magic Hour Evening Yesterday, Boolean}
-\item{HSEMHETOM}{Hollywood Studios Extra Magic Hour Evening Tomorrow, Boolean}
-\item{HSHOURSEMH}{Total Opening Hours including EMH for Hollywood Studios, numeric}
-\item{HSHOURSEMHYEST}{Yesterday\'s Total Opening Hours including EMH for Hollywood Studios, numeric}
-\item{HSHOURSEMHTOM}{Tomorrow\'s Total Opening Hours including EMH for Hollywood Studios, numeric}
-\item{AKEMHMORN}{Animal Kingdom Extra Animal Hour Morning, Boolean}
-\item{AKEMHMYEST}{Animal Kingdom Extra Animal Hour Morning Yesterday, Boolean}
-\item{AKEMHMTOM}{Animal Kingdom Extra Animal Hour Morning Tomorrow, Boolean}
-\item{AKEMHEVE}{Animal Kingdom Extra Animal Hour Evening, Boolean}
-\item{AKEMHEYEST}{Animal Kingdom Extra Animal Hour Evening Yesterday, Boolean}
-\item{AKEMHETOM}{Animal Kingdom Extra Animal Hour Evening Tomorrow, Boolean}
-\item{AKHOURSEMH}{Total Opening Hours including EMH for Animal Kingdom, numeric}
-\item{AKHOURSEMHYEST}{Yesterday\'s Total Opening Hours including EMH for Animal Kingdom, numeric}
-\item{AKHOURSEMHTOM}{Tomorrow\'s Total Opening Hours including EMH for Animal Kingdom, numeric}
-\item{MKOPEN}{Opening Hour for Magic Kingdom, HH:MM}
-\item{MKCLOSE}{Closing Hour for Magic Kingdom, HH:MM}
-\item{MKHOURS}{Total Opening Hours for Magic Kingdom, numeric}
-\item{MKEMHOPEN}{Magic Kingdom Extra Magic Hour Opening Time, HH:MM}
-\item{MKEMHCLOSE}{Magic Kingdom Extra Magic Hour Closing Time, HH:MM}
-\item{MKOPENYEST}{Yesterday\'s Opening Hour for Magic Kingdom, HH:MM}
-\item{MKCLOSEYEST}{Yesterday\'s Closing Hour for Magic Kingdom, HH:MM}
-\item{MKHOURSYEST}{Yesterday\'s Total Opening Hours for Magic Kingdom, numeric}
-\item{MKOPENTOM}{Tomorrow\'s Opening Hour for Magic Kingdom, HH:MM}
-\item{MKCLOSETOM}{Tomorrow\'s Closing Hour for Magic Kingdom, HH:MM}
-\item{MKHOURSTOM}{Tomorrow\'s Total Opening Hours for Magic Kingdom, numeric}
-\item{EPOPEN}{Opening Hour for Epcot, HH:MM}
-\item{EPCLOSE}{Closing Hour for Epcot, HH:MM}
-\item{EPHOURS}{Total Opening Hours for Epcot, numeric}
-\item{EPEMHOPEN}{Epcot Kingdom Extra Magic Hour Opening Time, HH:MM}
-\item{EPEMHCLOSE}{Epcot Extra Magic Hour Closing Time, HH:MM}
-\item{EPOPENYEST}{Yesterday\'s Opening Hour for Epcot, HH:MM}
-\item{EPCLOSEYEST}{Yesterday\'s Closing Hour for Epcot, HH:MM}
-\item{EPHOURSYEST}{Yesterday\'s Total Opening Hours for Epcot, numeric}
-\item{EPOPENTOM}{Tomorrow\'s Opening Hour for Epcot, HH:MM}
-\item{EPCLOSETOM}{Tomorrow\'s Closing Hour for Epcot, HH:MM}
-\item{EPHOURSTOM}{Tomorrow\'s Total Opening Hours for Epcot, numeric}
-\item{HSOPEN}{Opening Hour for Disney Hollywood Studios, HH:MM}
-\item{HSCLOSE}{Closing Hour for Disney Hollywood Studios, HH:MM}
-\item{HSHOURS}{Total Opening Hours for Disney Hollywood Studios, numeric}
-\item{HSEMHOPEN}{Hollywood Studios Extra Magic Hour Opening Time, HH:MM}
-\item{HSEMHCLOSE}{Hollywood Studios Extra Magic Hour Closing Time, HH:MM}
-\item{HSOPENYEST}{Yesterday\'s Opening Hour for Hollywood Studios, HH:MM}
-\item{HSCLOSEYEST}{Yesterday\'s Closing Hour for Hollywood Studios, HH:MM}
-\item{HSHOURSYEST}{Yesterday\'s Total Opening Hours for Hollywood Studios, numeric}
-\item{HSOPENTOM}{Tomorrow\'s Opening Hour for Hollywood Studios, HH:MM}
-\item{HSCLOSETOM}{Tomorrow\'s Closing Hour for Hollywood Studios, HH:MM}
-\item{HSHOURSTOM}{Tomorrow\'s Total Opening Hours for Hollywood Studios, numeric}
-\item{AKOPEN}{Opening Hour for Animal Kingdom, HH:MM}
-\item{AKCLOSE}{Closing Hour for Animal Kingdom, HH:MM}
-\item{AKHOURS}{Total Opening Hours for Animal Kingdom, numeric}
-\item{AKEMHOPEN}{Animal Kingdom Extra Magic Hour Opening Time, HH:MM}
-\item{AKEMHCLOSE}{Animal Kingdom Extra Magic Hour Closing Time, HH:MM}
-\item{AKOPENYEST}{Yesterday\'s Opening Hour for Animal Kingdom, HH:MM}
-\item{AKCLOSEYEST}{Yesterday\'s Closing Hour for Animal Kingdom, HH:MM}
-\item{AKHOURSYEST}{Yesterday\'s Total Opening Hours for Animal Kingdom, numeric}
-\item{AKOPENTOM}{Tomorrow\'s Opening Hour for Animal Kingdom, HH:MM}
-\item{AKCLOSETOM}{Tomorrow\'s Closing Hour for Animal Kingdom, HH:MM}
-\item{AKHOURSTOM}{Tomorrow\'s Total Opening Hours for Animal Kingdom, numeric}
-\item{MKDAYSBEFORENONEVENT}{Number of Days before next non-event day, numeric}
-\item{MKDAYSSINCENONEVENT}{Number of Days since the last non-event day, numeric}
-\item{MKEVENTSTREAK}{Number of Days of consecutive party days, numeric}
-\item{MKEVENTSTREAK_F}{Number of days of future consecutive party days, numeric}
-\item{PARTYSEASON_WDW}{Season of Magic Kingdom Parties, alphanumeric}
-\item{WDWMINTEMP_MEAN}{Average minimum daily temperature, numeric}
-\item{WEATHER_WDWHIGH}{Historical High Temperature, numeric}
-\item{WEATHER_WDWLOW}{Historical Low Temperature, numeric}
-\item{WEATHER_WDWPRECIP}{Historical Precipitation, numeric}
-\item{CAPACITYLOST_MK}{Total hourly capacity lost on that park day (due to attraction closures), numeric}
-\item{CAPACITYLOST_EP}{Total hourly capacity lost on that park day, numeric}
-\item{CAPACITYLOST_HS}{Total hourly capacity lost on that park day, numeric}
-\item{CAPACITYLOST_AK}{Total hourly capacity lost on that park day, numeric}
-\item{CAPACITYLOSTWGT_MK}{Total hourly capacity lost on that park day, weighted by attraction popularity, numeric}
-\item{CAPACITYLOSTWGT_EP}{Total hourly capacity lost on that park day, weighted by attraction popularity, numeric}
-\item{CAPACITYLOSTWGT_HS}{Total hourly capacity lost on that park day, weighted by attraction popularity, numeric}
-\item{CAPACITYLOSTWGT_AK}{Total hourly capacity lost on that park day, weighted by attraction popularity, numeric}
-\item{EP09CAPACITY}{Hourly capacity of Soarin\', numeric}
-\item{HS20CAPACITY}{Hourly capacity of Toy Story Mania, numeric}
-\item{MKPRDDAY}{Number of Daytime Parades at Magic Kingdom, numeric}
-\item{MKPRDDT1}{1st Parade Time at Magic Kingdom, HH:MM}
-\item{MKPRDDT2}{2nd Parade Time at Magic Kingdom, HH:MM}
-\item{MKPRDDN}{Magic Kingdom Day Time Parade Name, alphanumeric}
-\item{MKPRDNGT}{Number of Night Time Parades at Magic Kingdom, Boolean}
-\item{MKPRDNT1}{1st Night Parade Time at Magic Kingdom, HH:MM}
-\item{MKPRDNT2}{2nd Night Parade Time at Magic Kingdom, HH:MM}
-\item{MKPRDNN}{Magic Kingdom Night Parade Name, alphanumeric}
-\item{MKFIREWK}{Number of Fireworks Shows at Magic Kingdom, numeric}
-\item{MKFIRET1}{1st Magic Kingdom Fireworks time, HH:MM}
-\item{MKFIRET2}{2nd Magic Kingdom Fireworks time, HH:MM}
-\item{MKFIREN}{Evening Fireworks Name at Magic Kingdom, alphanumeric}
-\item{EPFIREWK}{Number of Fireworks Shows at Epcot, numeric}
-\item{EPFIRET1}{1st Epcot Fireworks time, HH:MM}
-\item{EPFIRET2}{2nd Epcot Fireworks time, HH:MM}
-\item{EPFIREN}{Evening Fireworks Name at Epcot, alphanumeric}
-\item{HSPRDDAY}{Number of Daytime Parades at Hollywood Studios, numeric}
-\item{HSPRDDT1}{1st Parade Time at Hollywood Studios, HH:MM}
-\item{HSPRDDN}{Hollywood Studios Day Time Parade Name, alphanumeric}
-\item{HSFIREWK}{Number of Fireworks Shows at Hollywood Studios, numeric}
-\item{HSFIRET1}{1st Hollywood Studios Fireworks time, HH:MM}
-\item{HSFIRET2}{2nd Hollywood Studios Fireworks time, HH:MM}
-\item{HSFIREN}{Evening Fireworks Name at Hollywood Studios, alphanumeric}
-\item{HSSHWNGT}{Number of Night Time Shows at Hollywood Studios, numeric}
-\item{HSSHWNT1}{1st Hollywood Studios Night Time Show time, HH:MM}
-\item{HSSHWNT2}{2nd Hollywood Studios Night Time Show time, HH:MM}
-\item{HSSHWNN}{Night Time Show Name at Hollywood Studios, alphanumeric}
-\item{HSFIREWKS}{Number of Fireworks Shows at Hollywood Studios, numeric}
-\item{AKPRDDAY}{Number of Daytime Parades at Animal Kingdom, numeric}
-\item{AKPRDDT1}{1st Parade Time at Animal Kingdom, HH:MM}
-\item{AKPRDDT2}{2nd Parade Time at Animal Kingdom, HH:MM}
-\item{AKPRDDN}{Animal Kingdom Day Time Parade Name, alphanumeric}
-\item{AKFIREN}{Fireworks Name at Animal Kingdom, alphanumeric}
-\item{AKSHWNGT}{Number of Night Time Shows at Animal Kingdom, numeric}
-\item{AKSHWNT1}{1st Animal Kingdom Night Time Show time, HH:MM}
-\item{AKSHWNT2}{2nd Animal Kingdom Night Time Show time, HH:MM}
-\item{AKSHWNN}{Night Time Show Name at Animal Kingdom, alphanumeric}
+\item{date}{Park Day (not actual date stamp of the wait time, since some are after midnight), Date}
+\item{wdw_ticket_season}{Walt Disney World Single Day Price Type, alphanumeric}
+\item{dayofweek}{Day of Week, numeric}
+\item{dayofyear}{Day of Year (0 to 365), numeric}
+\item{weekofyear}{Week of Year (0 to 53), numeric}
+\item{monthofyear}{Month of Year (1 to 12), numeric}
+\item{year}{Year, numeric}
+\item{season}{Seasonal Category (Fall, Winter, Thanksgiving, etc.), alphanumeric}
+\item{holidaypx}{Proximity to Holiday (2-directional) (in days), numeric}
+\item{holidaym}{Holiday Metric (1 to 5 ranking), numeric}
+\item{holidayn}{Name of Holiday, alphanumeric}
+\item{holiday}{Day is a Holiday, Boolean}
+\item{wdwticketseason}{WDW 1-day ticket season, alphanumeric}
+\item{wdwracen}{XXX Event Code, alphanumeric}
+\item{wdweventn}{XXX Event Code, alphanumeric}
+\item{wdwevent}{WDW Event, Boolean}
+\item{wdwrace}{WDW Race, Boolean}
+\item{wdwseason}{WDW Season, alphanumeric}
+\item{wdwmaxtemp}{WDW Max Temperature, numeric}
+\item{wdwmintemp}{WDW Min Temperature, numeric}
+\item{wdwmeantemp}{WDW Average Temperature, numeric}
+\item{mkeventn}{Magic Kingdom Event Code, alphanumeric}
+\item{mkevent}{Magic Kingdom Event, Boolean}
+\item{epeventn}{Epcot Event Code, alphanumeric}
+\item{epevent}{Epcot Event, Boolean}
+\item{hseventn}{Hollywood Studios Event Code, alphanumeric}
+\item{hsevent}{Hollywood Studios Event, Boolean}
+\item{akeventn}{Animal Kingdom Event Code, alphanumeric}
+\item{akevent}{Animal Kingdom Event, Boolean}
+\item{holidayj}{Name of Jewish Holiday, alphanumeric}
+\item{insession}{Percentage of Schools in Session, numeric}
+\item{insession_enrollment}{Percentage of Schools in Session Weighted by Enrollment, numeric}
+\item{insession_wdw}{Percentage of Schools in Session WDW markets only, numeric}
+\item{insession_dlr}{Percentage of Schools in Session DLR markets only, numeric}
+\item{insession_sqrt_wdw}{Percentage of Schools in Session Weighted by Square Root of Distance to WDW, numeric}
+\item{insession_sqrt_dlr}{Percentage of Schools in Session Weighted by Square Root of Distance to DLR, numeric}
+\item{insession_california}{Percentage of Schools in Session California Only, numeric}
+\item{insession_dc}{Percentage of Schools in Session D.C. Only, numeric}
+\item{insession_central_fl}{Percentage of Schools in Session Within Central Florida Only, numeric}
+\item{insession_drive1_fl}{Percentage of Schools in Session Within Driving Distance to Florida Only, numeric}
+\item{insession_drive2_fl}{Percentage of Schools in Session Within Driving Distance to Florida Only, numeric}
+\item{insession_drive_ca}{Percentage of Schools in Session Within Driving Distance to California Only, numeric}
+\item{insession_florida}{Percentage of Schools in Session Florida Only, numeric}
+\item{insession_mardi_gras}{Percentage of Schools in Session Mardi Gras States Only, numeric}
+\item{insession_midwest}{Percentage of Schools in Session Midwest Only, numeric}
+\item{insession_ny_nj}{Percentage of Schools in Session New York and New Jersey Only, numeric}
+\item{insession_ny_nj_pa}{Percentage of Schools in Session New York, New Jersey and Pennsylvania Only, numeric}
+\item{insession_new_england}{Percentage of Schools in Session New England Only, numeric}
+\item{insession_new_jersey}{Percentage of Schools in Session New Jersey Only, numeric}
+\item{insession_nothwest}{Percentage of Schools in Session Northwest Only, numeric}
+\item{insession_planes}{Percentage of Schools in Session Planes Only, numeric}
+\item{insession_socal}{Percentage of Schools in Session Southern California Only, numeric}
+\item{insession_southwest}{Percentage of Schools in Session Southwest Only, numeric}
+\item{sunset_wdw}{Time of Sunset in Orlando, HH:MM}
+\item{mkemhmorn}{Magic Kingdom Extra Magic Hour Morning, Boolean}
+\item{mkemhmyest}{Magic Kingdom Extra Magic Hour Morning Yesterday, Boolean}
+\item{mkemhmtom}{Magic Kingdom Extra Magic Hour Morning Tomorrow, Boolean}
+\item{mkemheve}{Magic Kingdom Extra Magic Hour Evening, Boolean}
+\item{mkhoursemh}{Total Opening Hours including EMH for Magic Kingdom, numeric}
+\item{mkhoursemhyest}{Yesterday\'s Total Opening Hours including EMH for Magic Kingdom, numeric}
+\item{mkhoursemhtom}{Tomorrow\'s Total Opening Hours including EMH for Magic Kingdom, numeric}
+\item{mkemheyest}{Magic Kingdom Extra Magic Hour Evening Yesterday, Boolean}
+\item{mkemhetom}{Magic Kingdom Extra Magic Hour Evening Tomorrow, Boolean}
+\item{epemhmorn}{Epcot Extra Magic Hour Morning, Boolean}
+\item{epemhmyest}{Epcot Extra Magic Hour Morning Yesterday, Boolean}
+\item{epemhmtom}{Epcot Extra Magic Hour Morning Tomorrow, Boolean}
+\item{epemheve}{Epcot Extra Magic Hour Evening, Boolean}
+\item{epemheyest}{Epcot Extra Magic Hour Evening Yesterday, Boolean}
+\item{epemhetom}{Epcot Extra Magic Hour Evening Tomorrow, Boolean}
+\item{ephoursemh}{Total Opening Hours including EMH for Epcot, numeric}
+\item{ephoursemhyest}{Yesterday\'s Total Opening Hours including EMH for Epcot, numeric}
+\item{ephoursemhtom}{Tomorrow\'s Total Opening Hours including EMH for Epcot, numeric}
+\item{hsemhmorn}{Hollywood Studios Extra Magic Hour Morning, Boolean}
+\item{hsemhmyest}{Hollywood Studios Extra Magic Hour Morning Yesterday, Boolean}
+\item{hsemhmtom}{Hollywood Studios Extra Magic Hour Morning Tomorrow, Boolean}
+\item{hsemheve}{Hollywood Studios Extra Magic Hour Evening, Boolean}
+\item{hsemheyest}{Hollywood Studios Extra Magic Hour Evening Yesterday, Boolean}
+\item{hsemhetom}{Hollywood Studios Extra Magic Hour Evening Tomorrow, Boolean}
+\item{hshoursemh}{Total Opening Hours including EMH for Hollywood Studios, numeric}
+\item{hshoursemhyest}{Yesterday\'s Total Opening Hours including EMH for Hollywood Studios, numeric}
+\item{hshoursemhtom}{Tomorrow\'s Total Opening Hours including EMH for Hollywood Studios, numeric}
+\item{akemhmorn}{Animal Kingdom Extra Animal Hour Morning, Boolean}
+\item{akemhmyest}{Animal Kingdom Extra Animal Hour Morning Yesterday, Boolean}
+\item{akemhmtom}{Animal Kingdom Extra Animal Hour Morning Tomorrow, Boolean}
+\item{akemheve}{Animal Kingdom Extra Animal Hour Evening, Boolean}
+\item{akemheyest}{Animal Kingdom Extra Animal Hour Evening Yesterday, Boolean}
+\item{akemhetom}{Animal Kingdom Extra Animal Hour Evening Tomorrow, Boolean}
+\item{akhoursemh}{Total Opening Hours including EMH for Animal Kingdom, numeric}
+\item{akhoursemhyest}{Yesterday\'s Total Opening Hours including EMH for Animal Kingdom, numeric}
+\item{akhoursemhtom}{Tomorrow\'s Total Opening Hours including EMH for Animal Kingdom, numeric}
+\item{mkopen}{Opening Hour for Magic Kingdom, HH:MM}
+\item{mkclose}{Closing Hour for Magic Kingdom, HH:MM}
+\item{mkhours}{Total Opening Hours for Magic Kingdom, numeric}
+\item{mkemhopen}{Magic Kingdom Extra Magic Hour Opening Time, HH:MM}
+\item{mkemhclose}{Magic Kingdom Extra Magic Hour Closing Time, HH:MM}
+\item{mkopenyest}{Yesterday\'s Opening Hour for Magic Kingdom, HH:MM}
+\item{mkcloseyest}{Yesterday\'s Closing Hour for Magic Kingdom, HH:MM}
+\item{mkhoursyest}{Yesterday\'s Total Opening Hours for Magic Kingdom, numeric}
+\item{mkopentom}{Tomorrow\'s Opening Hour for Magic Kingdom, HH:MM}
+\item{mkclosetom}{Tomorrow\'s Closing Hour for Magic Kingdom, HH:MM}
+\item{mkhourstom}{Tomorrow\'s Total Opening Hours for Magic Kingdom, numeric}
+\item{epopen}{Opening Hour for Epcot, HH:MM}
+\item{epclose}{Closing Hour for Epcot, HH:MM}
+\item{ephours}{Total Opening Hours for Epcot, numeric}
+\item{epemhopen}{Epcot Kingdom Extra Magic Hour Opening Time, HH:MM}
+\item{epemhclose}{Epcot Extra Magic Hour Closing Time, HH:MM}
+\item{epopenyest}{Yesterday\'s Opening Hour for Epcot, HH:MM}
+\item{epcloseyest}{Yesterday\'s Closing Hour for Epcot, HH:MM}
+\item{ephoursyest}{Yesterday\'s Total Opening Hours for Epcot, numeric}
+\item{epopentom}{Tomorrow\'s Opening Hour for Epcot, HH:MM}
+\item{epclosetom}{Tomorrow\'s Closing Hour for Epcot, HH:MM}
+\item{ephourstom}{Tomorrow\'s Total Opening Hours for Epcot, numeric}
+\item{hsopen}{Opening Hour for Disney Hollywood Studios, HH:MM}
+\item{hsclose}{Closing Hour for Disney Hollywood Studios, HH:MM}
+\item{hshours}{Total Opening Hours for Disney Hollywood Studios, numeric}
+\item{hsemhopen}{Hollywood Studios Extra Magic Hour Opening Time, HH:MM}
+\item{hsemhclose}{Hollywood Studios Extra Magic Hour Closing Time, HH:MM}
+\item{hsopenyest}{Yesterday\'s Opening Hour for Hollywood Studios, HH:MM}
+\item{hscloseyest}{Yesterday\'s Closing Hour for Hollywood Studios, HH:MM}
+\item{hshoursyest}{Yesterday\'s Total Opening Hours for Hollywood Studios, numeric}
+\item{hsopentom}{Tomorrow\'s Opening Hour for Hollywood Studios, HH:MM}
+\item{hsclosetom}{Tomorrow\'s Closing Hour for Hollywood Studios, HH:MM}
+\item{hshourstom}{Tomorrow\'s Total Opening Hours for Hollywood Studios, numeric}
+\item{akopen}{Opening Hour for Animal Kingdom, HH:MM}
+\item{akclose}{Closing Hour for Animal Kingdom, HH:MM}
+\item{akhours}{Total Opening Hours for Animal Kingdom, numeric}
+\item{akemhopen}{Animal Kingdom Extra Magic Hour Opening Time, HH:MM}
+\item{akemhclose}{Animal Kingdom Extra Magic Hour Closing Time, HH:MM}
+\item{akopenyest}{Yesterday\'s Opening Hour for Animal Kingdom, HH:MM}
+\item{akcloseyest}{Yesterday\'s Closing Hour for Animal Kingdom, HH:MM}
+\item{akhoursyest}{Yesterday\'s Total Opening Hours for Animal Kingdom, numeric}
+\item{akopentom}{Tomorrow\'s Opening Hour for Animal Kingdom, HH:MM}
+\item{akclosetom}{Tomorrow\'s Closing Hour for Animal Kingdom, HH:MM}
+\item{akhourstom}{Tomorrow\'s Total Opening Hours for Animal Kingdom, numeric}
+\item{mkdaysbeforenonevent}{Number of Days before next non-event day, numeric}
+\item{mkdayssincenonevent}{Number of Days since the last non-event day, numeric}
+\item{mkeventstreak}{Number of Days of consecutive party days, numeric}
+\item{mkeventstreak_f}{Number of days of future consecutive party days, numeric}
+\item{partyseason_wdw}{Season of Magic Kingdom Parties, alphanumeric}
+\item{wdwmintemp_mean}{Average minimum daily temperature, numeric}
+\item{weather_wdwhigh}{Historical High Temperature, numeric}
+\item{weather_wdwlow}{Historical Low Temperature, numeric}
+\item{weather_wdwprecip}{Historical Precipitation, numeric}
+\item{capacitylost_mk}{Total hourly capacity lost on that park day (due to attraction closures), numeric}
+\item{capacitylost_ep}{Total hourly capacity lost on that park day, numeric}
+\item{capacitylost_hs}{Total hourly capacity lost on that park day, numeric}
+\item{capacitylost_ak}{Total hourly capacity lost on that park day, numeric}
+\item{capacitylostwgt_mk}{Total hourly capacity lost on that park day, weighted by attraction popularity, numeric}
+\item{capacitylostwgt_ep}{Total hourly capacity lost on that park day, weighted by attraction popularity, numeric}
+\item{capacitylostwgt_hs}{Total hourly capacity lost on that park day, weighted by attraction popularity, numeric}
+\item{capacitylostwgt_ak}{Total hourly capacity lost on that park day, weighted by attraction popularity, numeric}
+\item{ep09capacity}{Hourly capacity of Soarin\', numeric}
+\item{hs20capacity}{Hourly capacity of Toy Story Mania, numeric}
+\item{mkprdday}{Number of Daytime Parades at Magic Kingdom, numeric}
+\item{mkprddt1}{1st Parade Time at Magic Kingdom, HH:MM}
+\item{mkprddt2}{2nd Parade Time at Magic Kingdom, HH:MM}
+\item{mkprddn}{Magic Kingdom Day Time Parade Name, alphanumeric}
+\item{mkprdngt}{Number of Night Time Parades at Magic Kingdom, Boolean}
+\item{mkprdnt1}{1st Night Parade Time at Magic Kingdom, HH:MM}
+\item{mkprdnt2}{2nd Night Parade Time at Magic Kingdom, HH:MM}
+\item{mkprdnn}{Magic Kingdom Night Parade Name, alphanumeric}
+\item{mkfirewk}{Number of Fireworks Shows at Magic Kingdom, numeric}
+\item{mkfiret1}{1st Magic Kingdom Fireworks time, HH:MM}
+\item{mkfiret2}{2nd Magic Kingdom Fireworks time, HH:MM}
+\item{mkfiren}{Evening Fireworks Name at Magic Kingdom, alphanumeric}
+\item{epfirewk}{Number of Fireworks Shows at Epcot, numeric}
+\item{epfiret1}{1st Epcot Fireworks time, HH:MM}
+\item{epfiret2}{2nd Epcot Fireworks time, HH:MM}
+\item{epfiren}{Evening Fireworks Name at Epcot, alphanumeric}
+\item{hsprdday}{Number of Daytime Parades at Hollywood Studios, numeric}
+\item{hsprddt1}{1st Parade Time at Hollywood Studios, HH:MM}
+\item{hsprddn}{Hollywood Studios Day Time Parade Name, alphanumeric}
+\item{hsfirewk}{Number of Fireworks Shows at Hollywood Studios, numeric}
+\item{hsfiret1}{1st Hollywood Studios Fireworks time, HH:MM}
+\item{hsfiret2}{2nd Hollywood Studios Fireworks time, HH:MM}
+\item{hsfiren}{Evening Fireworks Name at Hollywood Studios, alphanumeric}
+\item{hsshwngt}{Number of Night Time Shows at Hollywood Studios, numeric}
+\item{hsshwnt1}{1st Hollywood Studios Night Time Show time, HH:MM}
+\item{hsshwnt2}{2nd Hollywood Studios Night Time Show time, HH:MM}
+\item{hsshwnn}{Night Time Show Name at Hollywood Studios, alphanumeric}
+\item{hsfirewks}{Number of Fireworks Shows at Hollywood Studios, numeric}
+\item{akprdday}{Number of Daytime Parades at Animal Kingdom, numeric}
+\item{akprddt1}{1st Parade Time at Animal Kingdom, HH:MM}
+\item{akprddt2}{2nd Parade Time at Animal Kingdom, HH:MM}
+\item{akprddn}{Animal Kingdom Day Time Parade Name, alphanumeric}
+\item{akfiren}{Fireworks Name at Animal Kingdom, alphanumeric}
+\item{akshwngt}{Number of Night Time Shows at Animal Kingdom, numeric}
+\item{akshwnt1}{1st Animal Kingdom Night Time Show time, HH:MM}
+\item{akshwnt2}{2nd Animal Kingdom Night Time Show time, HH:MM}
+\item{akshwnn}{Night Time Show Name at Animal Kingdom, alphanumeric}
 }
 }
 \source{
