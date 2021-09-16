@@ -1,0 +1,191 @@
+﻿Variable Category,Variable Name,Variable Description,Format
+Main Variables,DATE,"Park Day (not actual date stamp of the wait time, since some are after midnight)",MM/DD/YYY
+Pricing Variables,WDW_TICKET_SEASON,Walt Disney World Single Day Price Type,alphanumeric
+Day Variables,DAYOFWEEK,Day of Week,numeric
+Day Variables,DAYOFYEAR,Day of Year (0 to 365),numeric
+Day Variables,WEEKOFYEAR,Week of Year (0 to 53),numeric
+Day Variables,MONTHOFYEAR,Month of Year (1 to 12),numeric
+Day Variables,YEAR,Year,numeric
+Day Variables,SEASON,"Seasonal Category (Fall, Winter, Thanksgiving, etc.)",alphanumeric
+Day Variables,HOLIDAYPX,Proximity to Holiday (2-directional) (in days),numeric
+Day Variables,HOLIDAYM,Holiday Metric (1 to 5 ranking),numeric
+Day Variables,HOLIDAYN,Name of Holiday,alphanumeric
+Day Variables,HOLIDAY,Day is a Holiday,Boolean
+Day Variables,WDWTICKETSEASON,WDW 1-day ticket season,alphanumeric
+Day Variables,WDWRaceN,XXX Event Code,alphanumeric
+Day Variables,WDWeventN,XXX Event Code,alphanumeric
+Day Variables,WDWevent,WDW Event,Boolean
+Day Variables,WDWrace,WDW Race,Boolean
+Day Variables,WDWSEASON,WDW Season,alphanumeric
+Day Variables,WDWMAXTEMP,WDW Max Temperature,numeric
+Day Variables,WDWMINTEMP,WDW Min Temperature,numeric
+Day Variables,WDWMEANTEMP,WDW Average Temperature,numeric
+Day Variables,MKeventN,Magic Kingdom Event Code,alphanumeric
+Day Variables,MKevent,Magic Kingdom Event,Boolean
+Day Variables,EPeventN,Epcot Event Code,alphanumeric
+Day Variables,EPevent,Epcot Event,Boolean
+Day Variables,HSeventN,Hollywood Studios Event Code,alphanumeric
+Day Variables,HSevent,Hollywood Studios Event,Boolean
+Day Variables,AKeventN,Animal Kingdom Event Code,alphanumeric
+Day Variables,AKevent,Animal Kingdom Event,Boolean
+Day Variables,HOLIDAYJ,Name of Jewish Holiday,alphanumeric
+School Schedules,INSESSION,Percentage of Schools in Session,numeric
+School Schedules,INSESSION_ENROLLMENT,Percentage of Schools in Session Weighted by Enrollment,numeric
+School Schedules,INSESSION_WDW,Percentage of Schools in Session WDW markets only,numeric
+School Schedules,INSESSION_DLR,Percentage of Schools in Session DLR markets only,numeric
+School Schedules,INSESSION_SQRT_WDW,Percentage of Schools in Session Weighted by Square Root of Distance to WDW,numeric
+School Schedules,INSESSION_SQRT_DLR,Percentage of Schools in Session Weighted by Square Root of Distance to DLR,numeric
+School Schedules,INSESSION_CALIFORNIA,Percentage of Schools in Session California Only,numeric
+School Schedules,INSESSION_DC,Percentage of Schools in Session D.C. Only,numeric
+School Schedules,inSession_Central_FL,Percentage of Schools in Session Within Central Florida Only,numeric
+School Schedules,INSESSION_DRIVE1_FL,Percentage of Schools in Session Within Driving Distance to Florida Only,numeric
+School Schedules,INSESSION_DRIVE2_FL,Percentage of Schools in Session Within Driving Distance to Florida Only,numeric
+School Schedules,INSESSION_DRIVE_CA,Percentage of Schools in Session Within Driving Distance to California Only,numeric
+School Schedules,INSESSION_FLORIDA,Percentage of Schools in Session Florida Only,numeric
+School Schedules,INSESSION_MARDI_GRAS,Percentage of Schools in Session Mardi Gras States Only,numeric
+School Schedules,INSESSION_MIDWEST,Percentage of Schools in Session Midwest Only,numeric
+School Schedules,INSESSION_NY_NJ,Percentage of Schools in Session New York and New Jersey Only,numeric
+School Schedules,INSESSION_NY_NJ_PA,"Percentage of Schools in Session New York, New Jersey and Pennsylvania Only",numeric
+School Schedules,INSESSION_NEW_ENGLAND,Percentage of Schools in Session New England Only,numeric
+School Schedules,INSESSION_NEW_JERSEY,Percentage of Schools in Session New Jersey Only,numeric
+School Schedules,INSESSION_NOTHWEST,Percentage of Schools in Session Northwest Only,numeric
+School Schedules,INSESSION_PLANES,Percentage of Schools in Session Planes Only,numeric
+School Schedules,INSESSION_SOCAL,Percentage of Schools in Session Southern California Only,numeric
+School Schedules,INSESSION_SOUTHWEST,Percentage of Schools in Session Southwest Only,numeric
+Other Key Variables,SUNSET_WDW,Time of Sunset in Orlando,HH:MM
+Extra Magic Hours,MKEMHMORN,Magic Kingdom Extra Magic Hour Morning,Boolean
+Extra Magic Hours,MKEMHMYEST,Magic Kingdom Extra Magic Hour Morning Yesterday,Boolean
+Extra Magic Hours,MKEMHMTOM,Magic Kingdom Extra Magic Hour Morning Tomorrow,Boolean
+Extra Magic Hours,MKEMHEVE,Magic Kingdom Extra Magic Hour Evening,Boolean
+Extra Magic Hours,MKHOURSEMH,Total Opening Hours including EMH for Magic Kingdom,numeric
+Extra Magic Hours,MKHOURSEMHYEST,Yesterday's Total Opening Hours including EMH for Magic Kingdom,numeric
+Extra Magic Hours,MKHOURSEMHTOM,Tomorrow's Total Opening Hours including EMH for Magic Kingdom,numeric
+Extra Magic Hours,MKEMHEYEST,Magic Kingdom Extra Magic Hour Evening Yesterday,Boolean
+Extra Magic Hours,MKEMHETOM,Magic Kingdom Extra Magic Hour Evening Tomorrow,Boolean
+Extra Magic Hours,EPEMHMORN,Epcot Extra Magic Hour Morning,Boolean
+Extra Magic Hours,EPEMHMYEST,Epcot Extra Magic Hour Morning Yesterday,Boolean
+Extra Magic Hours,EPEMHMTOM,Epcot Extra Magic Hour Morning Tomorrow,Boolean
+Extra Magic Hours,EPEMHEVE,Epcot Extra Magic Hour Evening,Boolean
+Extra Magic Hours,EPEMHEYEST,Epcot Extra Magic Hour Evening Yesterday,Boolean
+Extra Magic Hours,EPEMHETOM,Epcot Extra Magic Hour Evening Tomorrow,Boolean
+Extra Magic Hours,EPHOURSEMH,Total Opening Hours including EMH for Epcot,numeric
+Extra Magic Hours,EPHOURSEMHYEST,Yesterday's Total Opening Hours including EMH for Epcot,numeric
+Extra Magic Hours,EPHOURSEMHTOM,Tomorrow's Total Opening Hours including EMH for Epcot,numeric
+Extra Magic Hours,HSEMHMORN,Hollywood Studios Extra Magic Hour Morning,Boolean
+Extra Magic Hours,HSEMHMYEST,Hollywood Studios Extra Magic Hour Morning Yesterday,Boolean
+Extra Magic Hours,HSEMHMTOM,Hollywood Studios Extra Magic Hour Morning Tomorrow,Boolean
+Extra Magic Hours,HSEMHEVE,Hollywood Studios Extra Magic Hour Evening,Boolean
+Extra Magic Hours,HSEMHEYEST,Hollywood Studios Extra Magic Hour Evening Yesterday,Boolean
+Extra Magic Hours,HSEMHETOM,Hollywood Studios Extra Magic Hour Evening Tomorrow,Boolean
+Extra Magic Hours,HSHOURSEMH,Total Opening Hours including EMH for Hollywood Studios,numeric
+Extra Magic Hours,HSHOURSEMHYEST,Yesterday's Total Opening Hours including EMH for Hollywood Studios,numeric
+Extra Magic Hours,HSHOURSEMHTOM,Tomorrow's Total Opening Hours including EMH for Hollywood Studios,numeric
+Extra Magic Hours,AKEMHMORN,Animal Kingdom Extra Animal Hour Morning,Boolean
+Extra Magic Hours,AKEMHMYEST,Animal Kingdom Extra Animal Hour Morning Yesterday,Boolean
+Extra Magic Hours,AKEMHMTOM,Animal Kingdom Extra Animal Hour Morning Tomorrow,Boolean
+Extra Magic Hours,AKEMHEVE,Animal Kingdom Extra Animal Hour Evening,Boolean
+Extra Magic Hours,AKEMHEYEST,Animal Kingdom Extra Animal Hour Evening Yesterday,Boolean
+Extra Magic Hours,AKEMHETOM,Animal Kingdom Extra Animal Hour Evening Tomorrow,Boolean
+Extra Magic Hours,AKHOURSEMH,Total Opening Hours including EMH for Animal Kingdom,numeric
+Extra Magic Hours,AKHOURSEMHYEST,Yesterday's Total Opening Hours including EMH for Animal Kingdom,numeric
+Extra Magic Hours,AKHOURSEMHTOM,Tomorrow's Total Opening Hours including EMH for Animal Kingdom,numeric
+Park Hours,MKOPEN,Opening Hour for Magic Kingdom,HH:MM
+Park Hours,MKCLOSE,Closing Hour for Magic Kingdom,HH:MM
+Park Hours,MKHOURS,Total Opening Hours for Magic Kingdom,numeric
+Park Hours,MKEMHOPEN,Magic Kingdom Extra Magic Hour Opening Time,HH:MM
+Park Hours,MKEMHCLOSE,Magic Kingdom Extra Magic Hour Closing Time,HH:MM
+Park Hours,MKOPENYEST,Yesterday's Opening Hour for Magic Kingdom,HH:MM
+Park Hours,MKCLOSEYEST,Yesterday's Closing Hour for Magic Kingdom,HH:MM
+Park Hours,MKHOURSYEST,Yesterday's Total Opening Hours for Magic Kingdom,numeric
+Park Hours,MKOPENTOM,Tomorrow's Opening Hour for Magic Kingdom,HH:MM
+Park Hours,MKCLOSETOM,Tomorrow's Closing Hour for Magic Kingdom,HH:MM
+Park Hours,MKHOURSTOM,Tomorrow's Total Opening Hours for Magic Kingdom,numeric
+Park Hours,EPOPEN,Opening Hour for Epcot,HH:MM
+Park Hours,EPCLOSE,Closing Hour for Epcot,HH:MM
+Park Hours,EPHOURS,Total Opening Hours for Epcot,numeric
+Park Hours,EPEMHOPEN,Epcot Kingdom Extra Magic Hour Opening Time,HH:MM
+Park Hours,EPEMHCLOSE,Epcot Extra Magic Hour Closing Time,HH:MM
+Park Hours,EPOPENYEST,Yesterday's Opening Hour for Epcot,HH:MM
+Park Hours,EPCLOSEYEST,Yesterday's Closing Hour for Epcot,HH:MM
+Park Hours,EPHOURSYEST,Yesterday's Total Opening Hours for Epcot,numeric
+Park Hours,EPOPENTOM,Tomorrow's Opening Hour for Epcot,HH:MM
+Park Hours,EPCLOSETOM,Tomorrow's Closing Hour for Epcot,HH:MM
+Park Hours,EPHOURSTOM,Tomorrow's Total Opening Hours for Epcot,numeric
+Park Hours,HSOPEN,Opening Hour for Disney Hollywood Studios,HH:MM
+Park Hours,HSCLOSE,Closing Hour for Disney Hollywood Studios,HH:MM
+Park Hours,HSHOURS,Total Opening Hours for Disney Hollywood Studios,numeric
+Park Hours,HSEMHOPEN,Hollywood Studios Extra Magic Hour Opening Time,HH:MM
+Park Hours,HSEMHCLOSE,Hollywood Studios Extra Magic Hour Closing Time,HH:MM
+Park Hours,HSOPENYEST,Yesterday's Opening Hour for Hollywood Studios,HH:MM
+Park Hours,HSCLOSEYEST,Yesterday's Closing Hour for Hollywood Studios,HH:MM
+Park Hours,HSHOURSYEST,Yesterday's Total Opening Hours for Hollywood Studios,numeric
+Park Hours,HSOPENTOM,Tomorrow's Opening Hour for Hollywood Studios,HH:MM
+Park Hours,HSCLOSETOM,Tomorrow's Closing Hour for Hollywood Studios,HH:MM
+Park Hours,HSHOURSTOM,Tomorrow's Total Opening Hours for Hollywood Studios,numeric
+Park Hours,AKOPEN,Opening Hour for Animal Kingdom,HH:MM
+Park Hours,AKCLOSE,Closing Hour for Animal Kingdom,HH:MM
+Park Hours,AKHOURS,Total Opening Hours for Animal Kingdom,numeric
+Park Hours,AKEMHOPEN,Animal Kingdom Extra Magic Hour Opening Time,HH:MM
+Park Hours,AKEMHCLOSE,Animal Kingdom Extra Magic Hour Closing Time,HH:MM
+Park Hours,AKOPENYEST,Yesterday's Opening Hour for Animal Kingdom,HH:MM
+Park Hours,AKCLOSEYEST,Yesterday's Closing Hour for Animal Kingdom,HH:MM
+Park Hours,AKHOURSYEST,Yesterday's Total Opening Hours for Animal Kingdom,numeric
+Park Hours,AKOPENTOM,Tomorrow's Opening Hour for Animal Kingdom,HH:MM
+Park Hours,AKCLOSETOM,Tomorrow's Closing Hour for Animal Kingdom,HH:MM
+Park Hours,AKHOURSTOM,Tomorrow's Total Opening Hours for Animal Kingdom,numeric
+Party Variables,MKDAYSBEFORENONEVENT,Number of Days before next non-event day,numeric
+Party Variables,MKDAYSSINCENONEVENT,Number of Days since the last non-event day,numeric
+Party Variables,MKEVENTSTREAK,Number of Days of consecutive party days,numeric
+Party Variables,MKEVENTSTREAK_F,Number of days of future consecutive party days,numeric
+Party Variables,PARTYSEASON_WDW,Season of Magic Kingdom Parties,alphanumeric
+Weather,WDWMINTEMP_MEAN,Average minimum daily temperature,numeric
+Weather,WEATHER_WDWHIGH,Historical High Temperature,numeric
+Weather,WEATHER_WDWLOW,Historical Low Temperature,numeric
+Weather,WEATHER_WDWPRECIP,Historical Precipitation,numeric
+Capacity Variables,CAPACITYLOST_MK,Total hourly capacity lost on that park day (due to attraction closures),numeric
+Capacity Variables,CAPACITYLOST_EP,Total hourly capacity lost on that park day,numeric
+Capacity Variables,CAPACITYLOST_HS,Total hourly capacity lost on that park day,numeric
+Capacity Variables,CAPACITYLOST_AK,Total hourly capacity lost on that park day,numeric
+Capacity Variables,CAPACITYLOSTWGT_MK,"Total hourly capacity lost on that park day, weighted by attraction popularity",numeric
+Capacity Variables,CAPACITYLOSTWGT_EP,"Total hourly capacity lost on that park day, weighted by attraction popularity",numeric
+Capacity Variables,CAPACITYLOSTWGT_HS,"Total hourly capacity lost on that park day, weighted by attraction popularity",numeric
+Capacity Variables,CAPACITYLOSTWGT_AK,"Total hourly capacity lost on that park day, weighted by attraction popularity",numeric
+Capacity Variables,EP09CAPACITY,Hourly capacity of Soarin',numeric
+Capacity Variables,HS20CAPACITY,Hourly capacity of Toy Story Mania,numeric
+Parade or Evening Show,MKPRDDAY,Number of Daytime Parades at Magic Kingdom,numeric
+Parade or Evening Show,MKPRDDT1,1st Parade Time at Magic Kingdom,HH:MM
+Parade or Evening Show,MKPRDDT2,2nd Parade Time at Magic Kingdom,HH:MM
+Parade or Evening Show,MKPRDDN,Magic Kingdom Day Time Parade Name,alphanumeric
+Parade or Evening Show,MKPRDNGT,Number of Night Time Parades at Magic Kingdom,Boolean
+Parade or Evening Show,MKPRDNT1,1st Night Parade Time at Magic Kingdom,HH:MM
+Parade or Evening Show,MKPRDNT2,2nd Night Parade Time at Magic Kingdom,HH:MM
+Parade or Evening Show,MKPRDNN,Magic Kingdom Night Parade Name,alphanumeric
+Parade or Evening Show,MKFIREWK,Number of Fireworks Shows at Magic Kingdom,numeric
+Parade or Evening Show,MKFIRET1,1st Magic Kingdom Fireworks time,HH:MM
+Parade or Evening Show,MKFIRET2,2nd Magic Kingdom Fireworks time,HH:MM
+Parade or Evening Show,MKFIREN,Evening Fireworks Name at Magic Kingdom,alphanumeric
+Parade or Evening Show,EPFIREWK,Number of Fireworks Shows at Epcot,numeric
+Parade or Evening Show,EPFIRET1,1st Epcot Fireworks time,HH:MM
+Parade or Evening Show,EPFIRET2,2nd Epcot Fireworks time,HH:MM
+Parade or Evening Show,EPFIREN,Evening Fireworks Name at Epcot,alphanumeric
+Parade or Evening Show,HSPRDDAY,Number of Daytime Parades at Hollywood Studios,numeric
+Parade or Evening Show,HSPRDDT1,1st Parade Time at Hollywood Studios,HH:MM
+Parade or Evening Show,HSPRDDN,Hollywood Studios Day Time Parade Name,alphanumeric
+Parade or Evening Show,HSFIREWK,Number of Fireworks Shows at Hollywood Studios,numeric
+Parade or Evening Show,HSFIRET1,1st Hollywood Studios Fireworks time,HH:MM
+Parade or Evening Show,HSFIRET2,2nd Hollywood Studios Fireworks time,HH:MM
+Parade or Evening Show,HSFIREN,Evening Fireworks Name at Hollywood Studios,alphanumeric
+Parade or Evening Show,HSSHWNGT,Number of Night Time Shows at Hollywood Studios,numeric
+Parade or Evening Show,HSSHWNT1,1st Hollywood Studios Night Time Show time,HH:MM
+Parade or Evening Show,HSSHWNT2,2nd Hollywood Studios Night Time Show time,HH:MM
+Parade or Evening Show,HSSHWNN,Night Time Show Name at Hollywood Studios,alphanumeric
+Parade or Evening Show,HSFIREWKS,Number of Fireworks Shows at Hollywood Studios,numeric
+Parade or Evening Show,AKPRDDAY,Number of Daytime Parades at Animal Kingdom,numeric
+Parade or Evening Show,AKPRDDT1,1st Parade Time at Animal Kingdom,HH:MM
+Parade or Evening Show,AKPRDDT2,2nd Parade Time at Animal Kingdom,HH:MM
+Parade or Evening Show,AKPRDDN,Animal Kingdom Day Time Parade Name,alphanumeric
+Parade or Evening Show,AKFIREN,Fireworks Name at Animal Kingdom,alphanumeric
+Parade or Evening Show,AKSHWNGT,Number of Night Time Shows at Animal Kingdom,numeric
+Parade or Evening Show,AKSHWNT1,1st Animal Kingdom Night Time Show time,HH:MM
+Parade or Evening Show,AKSHWNT2,2nd Animal Kingdom Night Time Show time,HH:MM
+Parade or Evening Show,AKSHWNN,Night Time Show Name at Animal Kingdom,alphanumeric
