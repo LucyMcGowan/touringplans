@@ -17,3 +17,4 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
 Depends: 
     R (>= 2.10)
+URL: https://lucymcgowan.github.io/touringplans
