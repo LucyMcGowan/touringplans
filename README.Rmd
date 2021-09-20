@@ -29,41 +29,45 @@ The goal of touringplans is to provide access to Disney World Ride Wait Time Dat
 <!-- ``` -->
 
 You can install the development version of touringplans with:
-```{r}
+```{r, eval = FALSE}
 devtools::install_github("LucyMcGowan/touringplans")
 ```
 
 
+You can find a list of all data sets along with variable information on [the touringplans package website](https://lucymcgowan.github.io/touringplans)
+
 ## Example
 
-For example, the following code looks at the Toy Story Mania! posted and actual wait times. We look at the difference in average posted and actual wait times within each hour in January - May 2019, then average these across days and plot them.
+The `touringplans_2018` data frame contains wait time data aggregated by hour for 14 attractions, along with some park-level daily metadata. The example below demonstrates how wait times by day are associated with the Ticket Season. The example below uses the tidyverse package to assist with data wrangling.
 
-```{r}
+```{r, message = FALSE, warning = FALSE}
 library(touringplans)
 library(tidyverse)
-
-toy_story_mania %>%
-  filter(date >= as.Date("2019-01-01"), date <= as.Date("2019-05-31")) %>%
-  mutate(hour = lubridate::hour(datetime)) %>%
-  group_by(date, hour) %>%
-  summarise(avg_post = mean(spostmin, na.rm = TRUE),
-            avg_act = mean(sactmin, na.rm = TRUE),
-            diff = avg_post - avg_act, .groups = "drop") %>%
-  group_by(date) %>%
-  summarise(m = mean(diff, na.rm = TRUE)) -> toy_story_summary
-ggplot(toy_story_summary, aes(x = date, y = m)) + 
-  geom_point() +
-  labs(y = "Average difference between posted and \nactual wait times (minutes)")
+touringplans_2018 %>%
+  count(name)
 ```
 
-The `touringplans_metadata` is a data frame that contains metadata about the parks. This can be merged with the individual ride datasets. For example, the code below demonstrates how to merge the metadata with the `toy_story_summary` data curated above and recreate the plot, colored by ticket season.
+We can aggregate the hourly posted wait time data into an avarage wait time by day for each ride. 
 
 ```{r}
-
-toy_story_summary %>%
-  left_join(touringplans_metadata, by = "date") %>%
-  ggplot(aes(x = date, y = m, color = wdw_ticket_season)) + 
-  geom_point() +
-  labs(y = "Average difference between posted and \nactual wait times (minutes)", 
-       color = "Ticket Season") 
+agg_2018 <- touringplans_2018 %>%
+  group_by(date, name, wdw_ticket_season) %>%
+  summarise(average_diff = mean(avg_spostmin - avg_sactmin, na.rm = TRUE), .groups = "drop") %>%
+  filter(average_diff > -300) # remove weird data points (more on this later!)
 ```
+
+```{r}
+lm(average_diff ~ wdw_ticket_season, data = agg_2018) %>%
+  summary()
+```
+
+```{r, fig.height = 6}
+ggplot(agg_2018, aes(x = date, y = average_diff)) +
+  geom_point(aes(color = wdw_ticket_season)) +
+  geom_line() +
+  geom_hline(yintercept = 0, lty = 2) +
+  facet_wrap(~ name, ncol = 2) + 
+  labs(y = "Average posted wait time",
+       color = "Ticket Season")
+```
+
