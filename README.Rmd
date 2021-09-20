@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of touringplans is to provide access to Disney World Ride Wait Time Datasets curated by the TouringPlans.com team.
+The goal of touringplans is to provide access to Disney World Ride Wait Time Datasets curated by the [TouringPlans.com](https://touringplans.com) team.
 
 ## Installation
 
@@ -56,6 +56,7 @@ agg_2018 <- touringplans_2018 %>%
   filter(average_diff > -300) # remove weird data points (more on this later!)
 ```
 
+On average, Disney over predicts wait times by 15 and a half minutes per day on the 14 rides included in this dataset during peak season, around 11 and a half minutes per day during regular season, and around 13 minutes per day during value season.
 ```{r}
 lm(average_diff ~ wdw_ticket_season, data = agg_2018) %>%
   summary()
@@ -67,7 +68,22 @@ ggplot(agg_2018, aes(x = date, y = average_diff)) +
   geom_line() +
   geom_hline(yintercept = 0, lty = 2) +
   facet_wrap(~ name, ncol = 2) + 
-  labs(y = "Average posted wait time",
+  labs(y = "Average difference in posted and actual wait time",
        color = "Ticket Season")
 ```
+We can see that there are some attractions that this holds true for moreso than others.
+
+```{r, message = FALSE, warning = FALSE}
+library(ggridges)
+
+ggplot(agg_2018, aes(x = average_diff, y = wdw_ticket_season, fill = wdw_ticket_season)) +
+  geom_density_ridges() +
+  geom_vline(xintercept = 0, lty = 2) +
+  xlim(c(-30, 50)) +
+  facet_wrap(~ name, ncol = 3) + 
+  labs(x = "Average difference in posted and actual wait time",
+       fill = "Ticket Season",
+       y = "Ticket Season")
+```
+
 
