@@ -1,0 +1,88 @@
+code,name,short_name,land,opened_on,duration,average_wait_per_hundred
+AK07,Kilimanjaro Safaris,Kilimanjaro Safaris,Africa,04/22/1998,20,4
+AK11,Expedition Everest - Legend of the Forbidden Mountain,Expedition Everest,Asia,04/07/2006,4,4
+AK18,DINOSAUR,DINOSAUR,DinoLand U.S.A.,04/22/1998,3.5,3
+AK85,Na'vi River Journey,Na'vi River,Pandora - The World of Avatar,05/27/2017,5,5
+AK86,Avatar Flight of Passage,Flight of Passage,Pandora - The World of Avatar,05/27/2017,6,4
+CA03,"Monsters, Inc. Mike & Sulley to the Rescue!","Monsters, Inc.",Hollywood Land,01/23/2006,5,4
+CA06,The Twilight Zone Tower of Terror,Tower of Terror,Hollywood Land,05/05/2004,6,4
+CA09,Soarin' Around the World,Soarin',Grizzly Peak,02/08/2001,4.5,
+CA109,Radiator Springs Racers,Radiator Racers,Cars Land,06/15/2012,6,4
+CA110,Mater's Junkyard Jamboree,Mater's Jamboree,Cars Land,06/15/2012,2,10
+CA12,Grizzly River Run,Grizzly River Run,Grizzly Peak,02/08/2001,7,5
+CA120,Radiator Springs Racers Single Rider Line,Radiator Racers Single Rider,Cars Land,06/15/2012,,
+CA148,Luigi's Rollickin' Roadsters,Luigi's Roadsters,Cars Land,03/07/2016,1.3,
+CA19,California Screamin',California Screamin',Paradise Pier,02/08/2001,4,
+CA28,Pixar Pal-A-Round - Swinging,Pixar Pal-A-Round - Swing,Pixar Pier,05/04/2009,9,
+CA30,Toy Story Midway Mania!,Toy Story Mania!,Pixar Pier,06/17/2008,8,4.5
+CA39,Pixar Pal-A-Round - Non Swinging,Pixar Pal-A-Round - No Swing,Pixar Pier,05/04/2009,9,
+CA67,Goofy's Sky School,Goofy's Sky School,Paradise Gardens Park,04/20/2011,1.5,
+CA68,The Little Mermaid ~ Ariel's Undersea Adventure,Little Mermaid,Paradise Gardens Park,06/03/2011,7,3
+DL01,Alice in Wonderland,Alice in Wonderland,Fantasyland,06/14/1958,4,12
+DL02,Astro Orbitor,Astro Orbitor,Tomorrowland,05/24/1998,1.5,13
+DL03,Autopia,Autopia,Tomorrowland,07/17/1955,4.5,6
+DL05,Big Thunder Mountain Railroad,Big Thunder Mtn,Frontierland,09/15/1979,3.5,3
+DL07,Buzz Lightyear Astro Blasters,Buzz Lightyear,Tomorrowland,05/04/2005,4.5,3
+DL10,Chip 'n Dale Treehouse,Chip 'n Dale Tree,Mickey's Toontown,01/23/1993,10,
+DL12,Meet Disney Princesses at Royal Hall,Royal Hall,Fantasyland,03/12/2013,5,
+DL16,Dumbo the Flying Elephant,Dumbo,Fantasyland,08/16/1955,1.67,12
+DL17,Walt Disney's Enchanted Tiki Room,Enchanted Tiki Rm,Adventureland,07/23/1963,14.5,
+DL18,Finding Nemo Submarine Voyage,Finding Nemo Subs,Tomorrowland,06/11/2007,13,7.5
+DL20,Gadget's Go Coaster,Gadget's Go Coaster,Mickey's Toontown,01/24/1993,1,10
+DL24,Indiana Jones Adventure,Indiana Jones Adv,Adventureland,03/03/1995,10,3
+DL27,"""it's a small world""",it's a small world,Fantasyland,05/28/1966,14,2.5
+DL28,Jungle Cruise,Jungle Cruise,Adventureland,07/17/1955,7.5,3.5
+DL33,Matterhorn Bobsleds,Matterhorn,Fantasyland,06/14/1959,4,13
+DL34,Mickey's House and Meet Mickey,Mickey's House,Mickey's Toontown,01/23/1993,5,20
+DL35,Minnie's House,Minnie's House,Mickey's Toontown,01/23/1993,5,12
+DL37,Mr. Toad's Wild Ride,Mr Toad's Wild Ride,Fantasyland,07/17/1955,2,9
+DL38,Peter Pan's Flight,Peter Pan's Flight,Fantasyland,07/17/1955,3,11
+DL40,Pirates of the Caribbean,Pirates of Caribbean,New Orleans Square,03/18/1967,15,3
+DL42,Roger Rabbit's Car Toon Spin,Roger Rabbit's Spin,Mickey's Toontown,01/26/1994,4,7
+DL46,Space Mountain,Space Mountain,Tomorrowland,05/27/1977,5,3.5
+DL48,Splash Mountain,Splash Mountain,Critter Country,07/17/1989,11,3.5
+DL50,Star Tours: The Adventures Continue,Star Tours,Tomorrowland,01/09/1987,7,6
+DL53,Haunted Mansion,Haunted Mansion,New Orleans Square,08/09/1969,9,2.5
+EP02,Spaceship Earth,Spaceship Earth,Future World,10/01/1982,16,3
+EP09,Soarin' Around the World,Soarin',Future World,05/05/2005,8,3
+HS07,Muppet*Vision 3D,Muppet*Vision 3D,Grand Avenue,05/16/1991,17,
+HS103,Slinky Dog Dash,Slinky Dog,Toy Story Land,06/30/2018,3,5
+HS104,Alien Swirling Saucers,Alien Saucers,Toy Story Land,06/30/2018,2.5,10
+HS111,Mickey & Minnie's Runaway Railway,Mickey's Railway,Hollywood Boulevard,03/04/2020,5,4
+HS112,Millennium Falcon: Smugglers Run,Millennium Falcon,Star Wars: Galaxy's Edge,08/29/2019,5,
+HS113,Star Wars: Rise of the Resistance,Rise of Resistance,Star Wars: Galaxy's Edge,12/05/2019,18,
+HS116,Lightning McQueen's Racing Academy,Racing Academy,Sunset Boulevard,03/31/2019,10,
+HS12,Rock 'n' Roller Coaster Starring Aerosmith,Rock Coaster,Sunset Boulevard,07/29/1999,1.5,2.5
+HS15,Star Tours: The Adventures Continue,Star Tours,Echo Lake,12/15/1989,7,5
+HS20,Toy Story Mania!,Toy Story Mania!,Toy Story Land,05/31/2008,6.5,4.5
+HS22,The Twilight Zone Tower of Terror,Tower of Terror,Sunset Boulevard,07/22/1994,15,4
+HS26,Walt Disney Presents,Walt Disney Presents,Animation Courtyard,10/01/2001,25,
+MK01,Space Mountain,Space Mountain,Tomorrowland,01/15/1975,10,3
+MK02,Buzz Lightyear's Space Ranger Spin,Buzz Lightyear,Tomorrowland,10/07/1998,4.5,3
+MK03,Big Thunder Mountain Railroad,Big Thunder Mtn,Frontierland,09/23/1980,7,2.5
+MK04,Splash Mountain,Splash Mountain,Frontierland,07/17/1992,18,3.5
+MK05,Peter Pan's Flight,Peter Pan's Flight,Fantasyland,10/01/1971,3,5.5
+MK06,The Many Adventures of Winnie the Pooh,Winnie the Pooh,Fantasyland,06/05/1999,4,4
+MK13,Jungle Cruise,Jungle Cruise,Adventureland,10/01/1971,8,3.5
+MK141,Seven Dwarfs Mine Train,7 Dwarfs Train,Fantasyland,05/28/2014,3,5
+MK142,Under the Sea ~ Journey of the Little Mermaid,Under the Sea,Fantasyland,12/06/2012,7,3
+MK15,The Magic Carpets of Aladdin,Magic Carpets,Adventureland,05/23/2001,1.5,16
+MK16,Pirates of the Caribbean,Pirates of Caribbean,Adventureland,12/17/1973,7.5,1.5
+MK17,Swiss Family Treehouse,Swiss Family Tree,Adventureland,10/01/1971,12.5,7
+MK18,Country Bear Jamboree,Country Bears,Frontierland,10/01/1971,10,
+MK20,Tom Sawyer Island,Tom Sawyer Island,Frontierland,05/20/1973,30,
+MK22,The Hall of Presidents,Hall of Presidents,Liberty Square,10/01/1971,23,
+MK23,The Haunted Mansion,Haunted Mansion,Liberty Square,10/01/1971,10,2.5
+MK24,Liberty Square Riverboat,Liberty Sq Riverboat,Liberty Square,10/02/1971,16,
+MK26,Prince Charming Regal Carrousel,Regal Carrousel,Fantasyland,10/01/1971,2,5
+MK27,Dumbo the Flying Elephant,Dumbo,Fantasyland,10/01/1971,1.5,10
+MK28,"""it's a small world""",it's a small world,Fantasyland,10/01/1971,14,3.5
+MK29,Mad Tea Party,Mad Tea Party,Fantasyland,10/01/1971,1.5,7.5
+MK30,Mickey's PhilharMagic,PhilharMagic,Fantasyland,10/08/2003,12,
+MK34,The Barnstormer,Barnstormer,Fantasyland,10/01/1996,2,7
+MK39,Astro Orbiter,Astro Orbiter,Tomorrowland,02/25/1995,1.5,13.5
+MK40,"Monsters, Inc. Laugh Floor",Laugh Floor,Tomorrowland,04/02/2007,15,
+MK43,Tomorrowland Speedway,Tom'land Speedway,Tomorrowland,10/01/1971,4.25,4.5
+MK44,Tomorrowland Transit Authority PeopleMover,PeopleMover,Tomorrowland,07/01/1975,10,1.5
+MK45,Walt Disney's Carousel of Progress,Carousel of Progress,Tomorrowland,01/15/1975,21,
+MK46,Walt Disney's Enchanted Tiki Room,Enchanted Tiki Rm,Adventureland,10/01/1971,15.5,
