@@ -76,50 +76,72 @@
 <!-- ``` -->
 <p>You can install the development version of touringplans with:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"LucyMcGowan/touringplans"</span><span class="op">)</span>
-<span class="co">#&gt; Skipping install of 'touringplans' from a github remote, the SHA1 (84319908) has not changed since last install.</span>
-<span class="co">#&gt;   Use `force = TRUE` to force installation</span></code></pre></div>
+<code class="sourceCode R"><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"LucyMcGowan/touringplans"</span><span class="op">)</span></code></pre></div>
+<p>You can find a list of all data sets along with variable information on <a href="https://lucymcgowan.github.io/touringplans">the touringplans package website</a></p>
 </div>
 <div id="example" class="section level2">
 <h2 class="hasAnchor">
 <a href="#example" class="anchor"></a>Example</h2>
-<p>For example, the following code looks at the Toy Story Mania! posted and actual wait times. We look at the difference in average posted and actual wait times within each hour in January - May 2019, then average these across days and plot them.</p>
+<p>The <code>touringplans_2018</code> data frame contains wait time data aggregated by hour for 14 attractions, along with some park-level daily metadata. The example below demonstrates how wait times by day are associated with the Ticket Season. The example below uses the tidyverse package to assist with data wrangling.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://lucymcgowan.github.io/touringplans">touringplans</a></span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">tidyverse</span><span class="op">)</span>
-<span class="co">#&gt; ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.0 ──</span>
-<span class="co">#&gt; ✓ ggplot2 3.3.4     ✓ purrr   0.3.4</span>
-<span class="co">#&gt; ✓ tibble  3.1.4     ✓ dplyr   1.0.5</span>
-<span class="co">#&gt; ✓ tidyr   1.1.2     ✓ stringr 1.4.0</span>
-<span class="co">#&gt; ✓ readr   1.4.0     ✓ forcats 0.5.1</span>
-<span class="co">#&gt; ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──</span>
-<span class="co">#&gt; x dplyr::filter() masks stats::filter()</span>
-<span class="co">#&gt; x dplyr::lag()    masks stats::lag()</span>
-
-<span class="va">toy_story_mania</span> <span class="op">%&gt;%</span>
-  <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">date</span> <span class="op">&gt;=</span> <span class="fu"><a href="https://rdrr.io/r/base/as.Date.html">as.Date</a></span><span class="op">(</span><span class="st">"2019-01-01"</span><span class="op">)</span>, <span class="va">date</span> <span class="op">&lt;=</span> <span class="fu"><a href="https://rdrr.io/r/base/as.Date.html">as.Date</a></span><span class="op">(</span><span class="st">"2019-05-31"</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span>
-  <span class="fu">mutate</span><span class="op">(</span>hour <span class="op">=</span> <span class="fu">lubridate</span><span class="fu">::</span><span class="fu">hour</span><span class="op">(</span><span class="va">datetime</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span>
-  <span class="fu">group_by</span><span class="op">(</span><span class="va">date</span>, <span class="va">hour</span><span class="op">)</span> <span class="op">%&gt;%</span>
-  <span class="fu">summarise</span><span class="op">(</span>avg_post <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">spostmin</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>,
-            avg_act <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">sactmin</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>,
-            diff <span class="op">=</span> <span class="va">avg_post</span> <span class="op">-</span> <span class="va">avg_act</span>, .groups <span class="op">=</span> <span class="st">"drop"</span><span class="op">)</span> <span class="op">%&gt;%</span>
-  <span class="fu">group_by</span><span class="op">(</span><span class="va">date</span><span class="op">)</span> <span class="op">%&gt;%</span>
-  <span class="fu">summarise</span><span class="op">(</span>m <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">diff</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span> <span class="op">-&gt;</span> <span class="va">toy_story_summary</span>
-<span class="fu">ggplot</span><span class="op">(</span><span class="va">toy_story_summary</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">date</span>, y <span class="op">=</span> <span class="va">m</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> 
-  <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu">labs</span><span class="op">(</span>y <span class="op">=</span> <span class="st">"Average difference between posted and \nactual wait times (minutes)"</span><span class="op">)</span>
-<span class="co">#&gt; Warning: Removed 4 rows containing missing values (geom_point).</span></code></pre></div>
-<p><img src="reference/figures/README-unnamed-chunk-3-1.png" width="100%"></p>
-<p>The <code>touringplans_metadata</code> is a data frame that contains metadata about the parks. This can be merged with the individual ride datasets. For example, the code below demonstrates how to merge the metadata with the <code>toy_story_summary</code> data curated above and recreate the plot, colored by ticket season.</p>
+<span class="va">touringplans_2018</span> <span class="op">%&gt;%</span>
+  <span class="fu">count</span><span class="op">(</span><span class="va">name</span><span class="op">)</span>
+<span class="co">#&gt; # A tibble: 14 × 2</span>
+<span class="co">#&gt;    name                                                      n</span>
+<span class="co">#&gt;    &lt;chr&gt;                                                 &lt;int&gt;</span>
+<span class="co">#&gt;  1 Alien Swirling Saucers                                 2718</span>
+<span class="co">#&gt;  2 Avatar Flight of Passage                               5147</span>
+<span class="co">#&gt;  3 DINOSAUR                                               4884</span>
+<span class="co">#&gt;  4 Expedition Everest - Legend of the Forbidden Mountain  4950</span>
+<span class="co">#&gt;  5 Kilimanjaro Safaris                                    4887</span>
+<span class="co">#&gt;  6 Na'vi River Journey                                    5073</span>
+<span class="co">#&gt;  7 Pirates of the Caribbean                               5168</span>
+<span class="co">#&gt;  8 Rock 'n' Roller Coaster Starring Aerosmith             5062</span>
+<span class="co">#&gt;  9 Seven Dwarfs Mine Train                                5622</span>
+<span class="co">#&gt; 10 Slinky Dog Dash                                        2691</span>
+<span class="co">#&gt; 11 Soarin' Around the World                               5203</span>
+<span class="co">#&gt; 12 Spaceship Earth                                        5078</span>
+<span class="co">#&gt; 13 Splash Mountain                                        4964</span>
+<span class="co">#&gt; 14 Toy Story Mania!                                       5045</span></code></pre></div>
+<p>We can aggregate the hourly posted wait time data into an avarage wait time by day for each ride.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">toy_story_summary</span> <span class="op">%&gt;%</span>
-  <span class="fu">left_join</span><span class="op">(</span><span class="va">touringplans_metadata</span>, by <span class="op">=</span> <span class="st">"date"</span><span class="op">)</span> <span class="op">%&gt;%</span>
-  <span class="fu">ggplot</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">date</span>, y <span class="op">=</span> <span class="va">m</span>, color <span class="op">=</span> <span class="va">wdw_ticket_season</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> 
-  <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu">labs</span><span class="op">(</span>y <span class="op">=</span> <span class="st">"Average difference between posted and \nactual wait times (minutes)"</span>, 
-       color <span class="op">=</span> <span class="st">"Ticket Season"</span><span class="op">)</span> 
-<span class="co">#&gt; Warning: Removed 4 rows containing missing values (geom_point).</span></code></pre></div>
-<p><img src="reference/figures/README-unnamed-chunk-4-1.png" width="100%"></p>
+<code class="sourceCode R"><span class="va">agg_2018</span> <span class="op">&lt;-</span> <span class="va">touringplans_2018</span> <span class="op">%&gt;%</span>
+  <span class="fu">group_by</span><span class="op">(</span><span class="va">date</span>, <span class="va">name</span>, <span class="va">wdw_ticket_season</span><span class="op">)</span> <span class="op">%&gt;%</span>
+  <span class="fu">summarise</span><span class="op">(</span>average_diff <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">avg_spostmin</span> <span class="op">-</span> <span class="va">avg_sactmin</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>, .groups <span class="op">=</span> <span class="st">"drop"</span><span class="op">)</span> <span class="op">%&gt;%</span>
+  <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">average_diff</span> <span class="op">&gt;</span> <span class="op">-</span><span class="fl">300</span><span class="op">)</span> <span class="co"># remove weird data points (more on this later!)</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op">(</span><span class="va">average_diff</span> <span class="op">~</span> <span class="va">wdw_ticket_season</span>, data <span class="op">=</span> <span class="va">agg_2018</span><span class="op">)</span> <span class="op">%&gt;%</span>
+  <span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="op">)</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; Call:</span>
+<span class="co">#&gt; lm(formula = average_diff ~ wdw_ticket_season, data = agg_2018)</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; Residuals:</span>
+<span class="co">#&gt;     Min      1Q  Median      3Q     Max </span>
+<span class="co">#&gt; -82.401  -8.734  -3.066   5.487 198.772 </span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; Coefficients:</span>
+<span class="co">#&gt;                          Estimate Std. Error t value Pr(&gt;|t|)    </span>
+<span class="co">#&gt; (Intercept)               15.6420     0.6006  26.045  &lt; 2e-16 ***</span>
+<span class="co">#&gt; wdw_ticket_seasonregular  -3.9076     0.7074  -5.524 3.53e-08 ***</span>
+<span class="co">#&gt; wdw_ticket_seasonvalue    -2.4144     0.8378  -2.882  0.00397 ** </span>
+<span class="co">#&gt; ---</span>
+<span class="co">#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; Residual standard error: 17.57 on 3967 degrees of freedom</span>
+<span class="co">#&gt; Multiple R-squared:  0.007723,   Adjusted R-squared:  0.007223 </span>
+<span class="co">#&gt; F-statistic: 15.44 on 2 and 3967 DF,  p-value: 2.095e-07</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">ggplot</span><span class="op">(</span><span class="va">agg_2018</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">date</span>, y <span class="op">=</span> <span class="va">average_diff</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu">geom_point</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>color <span class="op">=</span> <span class="va">wdw_ticket_season</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu">geom_line</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu">geom_hline</span><span class="op">(</span>yintercept <span class="op">=</span> <span class="fl">0</span>, lty <span class="op">=</span> <span class="fl">2</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu">facet_wrap</span><span class="op">(</span><span class="op">~</span> <span class="va">name</span>, ncol <span class="op">=</span> <span class="fl">2</span><span class="op">)</span> <span class="op">+</span> 
+  <span class="fu">labs</span><span class="op">(</span>y <span class="op">=</span> <span class="st">"Average posted wait time"</span>,
+       color <span class="op">=</span> <span class="st">"Ticket Season"</span><span class="op">)</span></code></pre></div>
+<p><img src="reference/figures/README-unnamed-chunk-6-1.png" width="100%"></p>
 </div>
 </div>
   </div>
