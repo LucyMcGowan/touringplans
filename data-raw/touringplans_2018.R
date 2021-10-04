@@ -2,6 +2,7 @@ library(tidyverse)
 library(lubridate)
 library(touringplans)
 library(glue)
+
 group_hourly <- function(x, y) {
   x %>%
     filter(year(date) == 2018) %>%
@@ -56,8 +57,9 @@ d %>%
       grepl("Animal", park) ~ akemheve,
       grepl("Magic", park) ~ mkemheve,
     )) %>%
-  select(date, hour, name, avg_sactmin, avg_spostmin,  park, land, open, close,
-         extra_magic_morning, extra_magic_evening, wdw_ticket_season, short_name) -> touringplans_2018
+  select(date, hour, name, avg_sactmin, avg_spostmin, average_wait_per_hundred,
+         duration, park, land, open, close, extra_magic_morning,
+         extra_magic_evening, wdw_ticket_season, short_name) -> touringplans_2018
 
 usethis::use_data(touringplans_2018, overwrite = TRUE)
 

@@ -10,6 +10,8 @@
 #'   \item{name}{Disney's official attraction name, alphanumeric}
 #'   \item{avg_sactmin}{Average actual Wait Time (in minutes), numeric}
 #'   \item{avg_spostmin}{Average standby Posted Wait Time (in minutes),	numeric}
+#'   \item{average_wait_per_hundred}{The average wait per 100 guests in line, numeric}
+#'   \item{duration}{Duration of attraction in minutes, numeric}
 #'   \item{park}{Disney theme park where the attraction is located}
 #'   \item{land}{Section of the park an attraction is located}
 #'   \item{open}{Opening time for park where attraction is located, HH:MM}

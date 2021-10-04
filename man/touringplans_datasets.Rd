@@ -5,7 +5,7 @@
 \alias{touringplans_datasets}
 \title{Metadata about attractions included in datasets}
 \format{
-A data frame with 14 rows and 7 variables:
+A data frame with 14 rows and 8 variables:
 \describe{
 \item{dataset_name}{Name of dataset for ride wait times in this package, alphanumeric}
 \item{name}{Disney's official attraction name, alphanumeric}
@@ -14,6 +14,7 @@ A data frame with 14 rows and 7 variables:
 \item{land}{Section of the park an attraction is located}
 \item{opened_on}{Attraction's opening date, date}
 \item{duration}{Duration of attraction in minutes, numeric}
+\item{average_wait_per_hundred}{The average wait per 100 guests in line, numeric}
 }
 }
 \source{

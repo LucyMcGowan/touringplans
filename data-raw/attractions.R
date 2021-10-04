@@ -43,7 +43,8 @@ touringplans_datasets <- tibble(
 
 touringplans_datasets %>%
   left_join(attractions %>% filter(state == "Florida"), by = "name") %>%
-  select(dataset_name, name, short_name, park, land, opened_on, duration) -> touringplans_datasets
+  select(dataset_name, name, short_name, park, land, opened_on, duration,
+         average_wait_per_hundred) -> touringplans_datasets
 
 usethis::use_data(attractions, overwrite = TRUE)
 usethis::use_data(touringplans_datasets, overwrite = TRUE)
