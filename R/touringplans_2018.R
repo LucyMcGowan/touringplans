@@ -3,7 +3,7 @@
 #' A dataset containing hourly average posted and actual wait times for
 #' select Disney World attractions in 2018
 #'
-#' @format A data frame with 66,492 rows and 13 variables:
+#' @format A data frame with 66,492 rows and 15 variables:
 #' \describe{
 #'   \item{date}{Park Day (not actual date stamp of the wait time, since some are after midnight), Date}
 #'   \item{hour}{Hour of recorded wait time, numeric}

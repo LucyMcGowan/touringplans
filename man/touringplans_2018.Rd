@@ -5,7 +5,7 @@
 \alias{touringplans_2018}
 \title{Reduced data set for Disney World attraction wait times in 2018}
 \format{
-A data frame with 66,492 rows and 13 variables:
+A data frame with 66,492 rows and 15 variables:
 \describe{
 \item{date}{Park Day (not actual date stamp of the wait time, since some are after midnight), Date}
 \item{hour}{Hour of recorded wait time, numeric}
