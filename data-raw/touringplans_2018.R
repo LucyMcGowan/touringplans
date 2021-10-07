@@ -59,7 +59,7 @@ d %>%
     )) %>%
   select(date, hour, name, avg_sactmin, avg_spostmin, average_wait_per_hundred,
          duration, park, land, open, close, extra_magic_morning,
-         extra_magic_evening, wdw_ticket_season, short_name) -> touringplans_2018
+         extra_magic_evening, wdw_ticket_season, weather_wdwhigh, short_name) -> touringplans_2018
 
 touringplans_2018 %>%
   select(-average_wait_per_hundred, -duration, -short_name) %>%

@@ -17,6 +17,7 @@
 #'   \item{extra_magic_morning}{Extra magic hour morning, Boolean}
 #'   \item{extra_magic_evening}{Extra magic hour evening, Boolean}
 #'   \item{wdw_ticket_season}{Walt Disney World Single Day Price Type, alphanumeric}
+#'   \item{weather_wdwhigh}{Historical High Temperature, numeric}
 #' }
 #' @source Disney World Ride Wait Time Datasets, TouringPlans.com, September 2021,
 #' \url{https://touringplans.com/walt-disney-world/crowd-calendar#DataSets}, Accessed 16 September 2021
