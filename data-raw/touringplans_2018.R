@@ -61,5 +61,11 @@ d %>%
          duration, park, land, open, close, extra_magic_morning,
          extra_magic_evening, wdw_ticket_season, short_name) -> touringplans_2018
 
+touringplans_2018 %>%
+  select(-average_wait_per_hundred, -duration, -short_name) %>%
+  filter(name == "Seven Dwarfs Mine Train") -> seven_dwarfs_train_2018
+
 usethis::use_data(touringplans_2018, overwrite = TRUE)
+usethis::use_data(seven_dwarfs_train_2018, overwrite = TRUE)
+
 
