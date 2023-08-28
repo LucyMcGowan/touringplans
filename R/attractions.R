@@ -14,6 +14,6 @@
 #'   \item{duration}{Duration of attraction in minutes, numeric}
 #'   \item{average_wait_per_hundred}{Hypothetical wait time for every 100 people in the standby queue, numeric}
 #'   }
-#' @source "entities.csv" Disney World Ride Wait Time Datasets, TouringPlans.com, September 2021,
-#' \url{https://touringplans.com/walt-disney-world/crowd-calendar#DataSets}, Accessed 16 September 2021
+#' @source "entities.csv" Disney World Ride Wait Time Datasets, TouringPlans.com, August 2023,
+#' \url{https://touringplans.com/walt-disney-world/crowd-calendar#DataSets}, Accessed 28 August 2023
 "attractions"

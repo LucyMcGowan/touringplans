@@ -30,7 +30,7 @@ attractions <- attractions %>%
   ) ) %>%
   select(code, name, short_name, state, park, land, opened_on, duration, average_wait_per_hundred)
 
-touringplans_datasets <- tibble(
+attraction_datasets <- tibble(
   dataset_name =  Hmisc::Cs(alien_saucers, dinosaur, expedition_everest, flight_of_passage,
                             kilimanjaro_safaris, navi_river, pirates_of_caribbean,
                             rock_n_rollercoaster, seven_dwarfs_train, slinky_dog, soarin,
@@ -41,11 +41,11 @@ touringplans_datasets <- tibble(
            "Soarin' Around the World", "Spaceship Earth", "Splash Mountain", "Toy Story Mania!")
 )
 
-touringplans_datasets %>%
+attraction_datasets %>%
   left_join(attractions %>% filter(state == "Florida"), by = "name") %>%
   select(dataset_name, name, short_name, park, land, opened_on, duration,
-         average_wait_per_hundred) -> touringplans_datasets
+         average_wait_per_hundred) -> attraction_datasets
 
 usethis::use_data(attractions, overwrite = TRUE)
-usethis::use_data(touringplans_datasets, overwrite = TRUE)
+usethis::use_data(attraction_datasets, overwrite = TRUE)
 

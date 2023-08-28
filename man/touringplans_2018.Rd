@@ -5,29 +5,30 @@
 \alias{touringplans_2018}
 \title{Reduced data set for Disney World attraction wait times in 2018}
 \format{
-A data frame with 66,492 rows and 15 variables:
+A data frame with 66,492 rows and 17 variables:
 \describe{
 \item{date}{Park Day (not actual date stamp of the wait time, since some are after midnight), Date}
-\item{hour}{Hour of recorded wait time, numeric}
-\item{name}{Disney's official attraction name, alphanumeric}
-\item{avg_sactmin}{Average actual Wait Time (in minutes), numeric}
-\item{avg_spostmin}{Average standby Posted Wait Time (in minutes),	numeric}
-\item{average_wait_per_hundred}{The average wait per 100 guests in line, numeric}
-\item{duration}{Duration of attraction in minutes, numeric}
-\item{park}{Disney theme park where the attraction is located}
-\item{land}{Section of the park an attraction is located}
-\item{open}{Opening time for park where attraction is located, HH:MM}
-\item{close}{Closing time for park where attraction is located, HH:MM}
-\item{extra_magic_morning}{Extra magic hour morning, Boolean}
-\item{extra_magic_evening}{Extra magic hour evening, Boolean}
-\item{wdw_ticket_season}{Walt Disney World Single Day Price Type, alphanumeric}
-\item{weather_wdwhigh}{Historical High Temperature, numeric}
-\item{short_name}{Short name, alphanumeric}
+\item{wait_hour}{Hour of recorded wait time, numeric}
+\item{attraction_name}{Disney's official attraction name, alphanumeric}
+\item{wait_minutes_actual_avg}{Average actual Wait Time (in minutes), numeric}
+\item{wait_minutes_posted_avg}{Average standby Posted Wait Time (in minutes),	numeric}
+\item{attraction_wait_per_hundred_average}{The average wait per 100 guests in line, numeric}
+\item{attraction_duration}{Duration of attraction in minutes, numeric}
+\item{attraction_park}{Disney theme park where the attraction is located}
+\item{attraction_land}{Section of the park an attraction is located}
+\item{park_open}{Opening time for park where attraction is located, HH:MM}
+\item{park_close}{Closing time for park where attraction is located, HH:MM}
+\item{park_extra_magic_morning}{Extra magic hour morning, Boolean}
+\item{park_extra_magic_evening}{Extra magic hour evening, Boolean}
+\item{day_ticket_season}{Walt Disney World Single Day Price Type, alphanumeric}
+\item{day_temperature_average}{Historical Average Temperature, numeric}
+\item{day_temperature_high}{Historical High Temperature, numeric}
+\item{attraction_short_name}{Short name, alphanumeric}
 }
 }
 \source{
-Disney World Ride Wait Time Datasets, TouringPlans.com, September 2021,
-\url{https://touringplans.com/walt-disney-world/crowd-calendar#DataSets}, Accessed 16 September 2021
+Disney World Ride Wait Time Datasets, TouringPlans.com, August 2023,
+\url{https://touringplans.com/walt-disney-world/crowd-calendar#DataSets}, Accessed 28 August 2023
 }
 \usage{
 touringplans_2018

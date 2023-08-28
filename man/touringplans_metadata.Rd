@@ -7,7 +7,7 @@
 \format{
 A data frame with 2079 rows and 181 variables:
 \describe{
-\item{date}{Park Day (not actual date stamp of the wait time, since some are after midnight), Date}
+\item{date}{Park Day (not actual date stamp of the wait time, since some are after midnight), MM/DD/YYY}
 \item{wdw_ticket_season}{Walt Disney World Single Day Price Type, alphanumeric}
 \item{dayofweek}{Day of Week, numeric}
 \item{dayofyear}{Day of Year (0 to 365), numeric}
@@ -60,7 +60,6 @@ A data frame with 2079 rows and 181 variables:
 \item{insession_planes}{Percentage of Schools in Session Planes Only, numeric}
 \item{insession_socal}{Percentage of Schools in Session Southern California Only, numeric}
 \item{insession_southwest}{Percentage of Schools in Session Southwest Only, numeric}
-\item{sunset_wdw}{Time of Sunset in Orlando, HH:MM}
 \item{mkemhmorn}{Magic Kingdom Extra Magic Hour Morning, Boolean}
 \item{mkemhmyest}{Magic Kingdom Extra Magic Hour Morning Yesterday, Boolean}
 \item{mkemhmtom}{Magic Kingdom Extra Magic Hour Morning Tomorrow, Boolean}
@@ -141,12 +140,6 @@ A data frame with 2079 rows and 181 variables:
 \item{akopentom}{Tomorrow\'s Opening Hour for Animal Kingdom, HH:MM}
 \item{akclosetom}{Tomorrow\'s Closing Hour for Animal Kingdom, HH:MM}
 \item{akhourstom}{Tomorrow\'s Total Opening Hours for Animal Kingdom, numeric}
-\item{mkdaysbeforenonevent}{Number of Days before next non-event day, numeric}
-\item{mkdayssincenonevent}{Number of Days since the last non-event day, numeric}
-\item{mkeventstreak}{Number of Days of consecutive party days, numeric}
-\item{mkeventstreak_f}{Number of days of future consecutive party days, numeric}
-\item{partyseason_wdw}{Season of Magic Kingdom Parties, alphanumeric}
-\item{wdwmintemp_mean}{Average minimum daily temperature, numeric}
 \item{weather_wdwhigh}{Historical High Temperature, numeric}
 \item{weather_wdwlow}{Historical Low Temperature, numeric}
 \item{weather_wdwprecip}{Historical Precipitation, numeric}
@@ -158,8 +151,6 @@ A data frame with 2079 rows and 181 variables:
 \item{capacitylostwgt_ep}{Total hourly capacity lost on that park day, weighted by attraction popularity, numeric}
 \item{capacitylostwgt_hs}{Total hourly capacity lost on that park day, weighted by attraction popularity, numeric}
 \item{capacitylostwgt_ak}{Total hourly capacity lost on that park day, weighted by attraction popularity, numeric}
-\item{ep09capacity}{Hourly capacity of Soarin\', numeric}
-\item{hs20capacity}{Hourly capacity of Toy Story Mania, numeric}
 \item{mkprdday}{Number of Daytime Parades at Magic Kingdom, numeric}
 \item{mkprddt1}{1st Parade Time at Magic Kingdom, HH:MM}
 \item{mkprddt2}{2nd Parade Time at Magic Kingdom, HH:MM}
@@ -200,8 +191,8 @@ A data frame with 2079 rows and 181 variables:
 }
 }
 \source{
-"metadata.csv" Disney World Ride Wait Time Datasets, TouringPlans.com, September 2021,
-\url{https://touringplans.com/walt-disney-world/crowd-calendar#DataSets}, Accessed 16 September 2021
+"metadata.csv" Disney World Ride Wait Time Datasets, TouringPlans.com, August 2023,
+\url{https://touringplans.com/walt-disney-world/crowd-calendar#DataSets}, Accessed 28 August 2023
 }
 \usage{
 touringplans_metadata

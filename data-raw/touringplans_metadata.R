@@ -189,10 +189,14 @@ touringplans_metadata <- read_csv("data-raw/touringplans_metadata.csv",
 names(touringplans_metadata) <- tolower(names(touringplans_metadata))
 ## print data dictionary for documentation
 dd <- read_csv("data-raw/meta-datadictionary.csv",
-               col_names = c("cat", "var", "desc", "format"))
+               col_names = c("cat", "var", "desc", "format"),
+               skip = 1)
+## only keep the ones that we need
+dd <- dd[tolower(dd$var) %in% names(touringplans_metadata), ]
 fix_quote <- function(x) gsub("'", "\\\\'", x)
+
 clipr::write_clip(
-  glue::glue_data(x, "#'   \\item{<tolower(var)>}{<fix_quote(desc)>, <format>}",
+  glue::glue_data(dd, "#'   \\item{<tolower(var)>}{<fix_quote(desc)>, <format>}",
                   .open = "<", .close = ">")
 )
 usethis::use_data(touringplans_metadata, overwrite = TRUE)

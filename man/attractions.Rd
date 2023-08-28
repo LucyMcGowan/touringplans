@@ -19,8 +19,8 @@ A data frame with 87 rows and 8 variables:
 }
 }
 \source{
-"entities.csv" Disney World Ride Wait Time Datasets, TouringPlans.com, September 2021,
-\url{https://touringplans.com/walt-disney-world/crowd-calendar#DataSets}, Accessed 16 September 2021
+"entities.csv" Disney World Ride Wait Time Datasets, TouringPlans.com, August 2023,
+\url{https://touringplans.com/walt-disney-world/crowd-calendar#DataSets}, Accessed 28 August 2023
 }
 \usage{
 attractions
