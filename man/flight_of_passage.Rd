@@ -5,7 +5,7 @@
 \alias{flight_of_passage}
 \title{Avatar Flight of Passage  Wait Times}
 \format{
-A data frame with 143,761 rows and 4 variables:
+A data frame with 184,818 rows and 4 variables:
 \describe{
 \item{date}{Park Day (not actual date stamp of the wait time, since some are after midnight), Date}
 \item{datetime}{date-time stamp of wait time,	YYYY-MM-DD HH:MM:SS}

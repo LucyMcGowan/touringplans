@@ -5,7 +5,7 @@
 \alias{slinky_dog}
 \title{Slinky Dog Dash Wait Times}
 \format{
-A data frame with 93,807 rows and 4 variables:
+A data frame with 135,946 rows and 4 variables:
 \describe{
 \item{date}{Park Day (not actual date stamp of the wait time, since some are after midnight), Date}
 \item{datetime}{date-time stamp of wait time,	YYYY-MM-DD HH:MM:SS}

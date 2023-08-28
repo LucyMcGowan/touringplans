@@ -5,7 +5,7 @@
 \alias{expedition_everest}
 \title{Expedition Everest Wait Times}
 \format{
-A data frame with 232,858 rows and 4 variables:
+A data frame with 275,274 rows and 4 variables:
 \describe{
 \item{date}{Park Day (not actual date stamp of the wait time, since some are after midnight), Date}
 \item{datetime}{date-time stamp of wait time,	YYYY-MM-DD HH:MM:SS}

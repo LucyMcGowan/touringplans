@@ -5,7 +5,7 @@
 \alias{kilimanjaro_safaris}
 \title{Kilimanjaro Safaris Wait Times}
 \format{
-A data frame with 218,531 rows and 4 variables:
+A data frame with 257,785 rows and 4 variables:
 \describe{
 \item{date}{Park Day (not actual date stamp of the wait time, since some are after midnight), Date}
 \item{datetime}{date-time stamp of wait time,	YYYY-MM-DD HH:MM:SS}

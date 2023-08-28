@@ -5,7 +5,7 @@
 \alias{navi_river}
 \title{Na'vi River Journey Wait Times}
 \format{
-A data frame with 142,304 rows and 4 variables:
+A data frame with 182,121 rows and 4 variables:
 \describe{
 \item{date}{Park Day (not actual date stamp of the wait time, since some are after midnight), Date}
 \item{datetime}{date-time stamp of wait time,	YYYY-MM-DD HH:MM:SS}

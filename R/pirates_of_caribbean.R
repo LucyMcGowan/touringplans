@@ -2,7 +2,7 @@
 #'
 #' A dataset containing Pirates of the Caribbean wait times.
 #'
-#' @format A data frame with 255,429 rows and 4 variables:
+#' @format A data frame with 301,946 rows and 4 variables:
 #' \describe{
 #'   \item{date}{Park Day (not actual date stamp of the wait time, since some are after midnight), Date}
 #'   \item{datetime}{date-time stamp of wait time,	YYYY-MM-DD HH:MM:SS}

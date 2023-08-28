@@ -2,7 +2,7 @@
 #'
 #' A dataset containing Toy Story Mania! wait times at Disney's Hollywood Studios.
 #'
-#' @format A data frame with 240,079 rows and 4 variables:
+#' @format A data frame with 284,170 rows and 4 variables:
 #' \describe{
 #'   \item{date}{Park Day (not actual date stamp of the wait time, since some are after midnight), Date}
 #'   \item{datetime}{date-time stamp of wait time,	YYYY-MM-DD HH:MM:SS}

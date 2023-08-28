@@ -5,7 +5,7 @@
 \alias{alien_saucers}
 \title{Alien Swirling Saucers Wait Times}
 \format{
-A data frame with 90,405 rows and 4 variables:
+A data frame with 129,876 rows and 4 variables:
 \describe{
 \item{date}{Park Day (not actual date stamp of the wait time, since some are after midnight), Date}
 \item{datetime}{date-time stamp of wait time,	YYYY-MM-DD HH:MM:SS}
