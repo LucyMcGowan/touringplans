@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://lucymcgowan.github.io/touringplans/404.html</loc>
+  </url>
+  <url>
+    <loc>https://lucymcgowan.github.io/touringplans/LICENSE-text.html</loc>
+  </url>
+  <url>
+    <loc>https://lucymcgowan.github.io/touringplans/LICENSE.html</loc>
+  </url>
+  <url>
+    <loc>https://lucymcgowan.github.io/touringplans/authors.html</loc>
+  </url>
+  <url>
     <loc>https://lucymcgowan.github.io/touringplans/index.html</loc>
   </url>
   <url>
     <loc>https://lucymcgowan.github.io/touringplans/reference/alien_saucers.html</loc>
+  </url>
+  <url>
+    <loc>https://lucymcgowan.github.io/touringplans/reference/attraction_datasets.html</loc>
   </url>
   <url>
     <loc>https://lucymcgowan.github.io/touringplans/reference/attractions.html</loc>
@@ -17,6 +32,9 @@
   </url>
   <url>
     <loc>https://lucymcgowan.github.io/touringplans/reference/flight_of_passage.html</loc>
+  </url>
+  <url>
+    <loc>https://lucymcgowan.github.io/touringplans/reference/index.html</loc>
   </url>
   <url>
     <loc>https://lucymcgowan.github.io/touringplans/reference/kilimanjaro_safaris.html</loc>
@@ -50,9 +68,6 @@
   </url>
   <url>
     <loc>https://lucymcgowan.github.io/touringplans/reference/touringplans_2018.html</loc>
-  </url>
-  <url>
-    <loc>https://lucymcgowan.github.io/touringplans/reference/touringplans_datasets.html</loc>
   </url>
   <url>
     <loc>https://lucymcgowan.github.io/touringplans/reference/touringplans_metadata.html</loc>
