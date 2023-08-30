@@ -19,10 +19,10 @@
     <loc>https://lucymcgowan.github.io/touringplans/reference/alien_saucers.html</loc>
   </url>
   <url>
-    <loc>https://lucymcgowan.github.io/touringplans/reference/attraction_datasets.html</loc>
+    <loc>https://lucymcgowan.github.io/touringplans/reference/attractions.html</loc>
   </url>
   <url>
-    <loc>https://lucymcgowan.github.io/touringplans/reference/attractions.html</loc>
+    <loc>https://lucymcgowan.github.io/touringplans/reference/attractions_metadata.html</loc>
   </url>
   <url>
     <loc>https://lucymcgowan.github.io/touringplans/reference/dinosaur.html</loc>
@@ -41,6 +41,9 @@
   </url>
   <url>
     <loc>https://lucymcgowan.github.io/touringplans/reference/navi_river.html</loc>
+  </url>
+  <url>
+    <loc>https://lucymcgowan.github.io/touringplans/reference/parks_metadata_raw.html</loc>
   </url>
   <url>
     <loc>https://lucymcgowan.github.io/touringplans/reference/pirates_of_caribbean.html</loc>
@@ -68,9 +71,6 @@
   </url>
   <url>
     <loc>https://lucymcgowan.github.io/touringplans/reference/touringplans_2018.html</loc>
-  </url>
-  <url>
-    <loc>https://lucymcgowan.github.io/touringplans/reference/touringplans_metadata.html</loc>
   </url>
   <url>
     <loc>https://lucymcgowan.github.io/touringplans/reference/toy_story_mania.html</loc>
