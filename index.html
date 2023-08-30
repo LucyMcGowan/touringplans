@@ -83,9 +83,9 @@
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://lucymcgowan.github.io/touringplans">touringplans</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org" class="external-link">tidyverse</a></span><span class="op">)</span></span>
 <span><span class="va">touringplans_2018</span> <span class="op">%&gt;%</span></span>
-<span>  <span class="fu">count</span><span class="op">(</span><span class="va">name</span><span class="op">)</span></span>
+<span>  <span class="fu">count</span><span class="op">(</span><span class="va">attraction_name</span><span class="op">)</span></span>
 <span><span class="co">#&gt; # A tibble: 14 × 2</span></span>
-<span><span class="co">#&gt;    name                                                      n</span></span>
+<span><span class="co">#&gt;    attraction_name                                           n</span></span>
 <span><span class="co">#&gt;    &lt;chr&gt;                                                 &lt;int&gt;</span></span>
 <span><span class="co">#&gt;  1 Alien Swirling Saucers                                 2718</span></span>
 <span><span class="co">#&gt;  2 Avatar Flight of Passage                               5147</span></span>
@@ -104,26 +104,26 @@
 <p>We can aggregate the hourly posted wait time data into an avarage wait time by day for each ride.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">agg_2018</span> <span class="op">&lt;-</span> <span class="va">touringplans_2018</span> <span class="op">%&gt;%</span></span>
-<span>  <span class="fu">group_by</span><span class="op">(</span><span class="va">date</span>, <span class="va">name</span>, <span class="va">wdw_ticket_season</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
-<span>  <span class="fu">summarise</span><span class="op">(</span>average_diff <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">avg_spostmin</span> <span class="op">-</span> <span class="va">avg_sactmin</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>, .groups <span class="op">=</span> <span class="st">"drop"</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">group_by</span><span class="op">(</span><span class="va">park_date</span>, <span class="va">attraction_name</span>, <span class="va">park_ticket_season</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">summarise</span><span class="op">(</span>average_diff <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">wait_minutes_posted_avg</span> <span class="op">-</span> <span class="va">wait_minutes_actual_avg</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>, .groups <span class="op">=</span> <span class="st">"drop"</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/r/stats/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">average_diff</span> <span class="op">&gt;</span> <span class="op">-</span><span class="fl">300</span><span class="op">)</span> <span class="co"># remove weird data points (more on this later!)</span></span></code></pre></div>
 <p>On average, Disney over predicts wait times by 15 and a half minutes per day on the 14 rides included in this dataset during peak season, around 11 and a half minutes per day during regular season, and around 13 minutes per day during value season.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/lm.html" class="external-link">lm</a></span><span class="op">(</span><span class="va">average_diff</span> <span class="op">~</span> <span class="va">wdw_ticket_season</span>, data <span class="op">=</span> <span class="va">agg_2018</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/lm.html" class="external-link">lm</a></span><span class="op">(</span><span class="va">average_diff</span> <span class="op">~</span> <span class="va">park_ticket_season</span>, data <span class="op">=</span> <span class="va">agg_2018</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Call:</span></span>
-<span><span class="co">#&gt; lm(formula = average_diff ~ wdw_ticket_season, data = agg_2018)</span></span>
+<span><span class="co">#&gt; lm(formula = average_diff ~ park_ticket_season, data = agg_2018)</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Residuals:</span></span>
 <span><span class="co">#&gt;     Min      1Q  Median      3Q     Max </span></span>
 <span><span class="co">#&gt; -82.401  -8.734  -3.066   5.487 198.772 </span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Coefficients:</span></span>
-<span><span class="co">#&gt;                          Estimate Std. Error t value Pr(&gt;|t|)    </span></span>
-<span><span class="co">#&gt; (Intercept)               15.6420     0.6006  26.045  &lt; 2e-16 ***</span></span>
-<span><span class="co">#&gt; wdw_ticket_seasonregular  -3.9076     0.7074  -5.524 3.53e-08 ***</span></span>
-<span><span class="co">#&gt; wdw_ticket_seasonvalue    -2.4144     0.8378  -2.882  0.00397 ** </span></span>
+<span><span class="co">#&gt;                           Estimate Std. Error t value Pr(&gt;|t|)    </span></span>
+<span><span class="co">#&gt; (Intercept)                15.6420     0.6006  26.045  &lt; 2e-16 ***</span></span>
+<span><span class="co">#&gt; park_ticket_seasonregular  -3.9076     0.7074  -5.524 3.53e-08 ***</span></span>
+<span><span class="co">#&gt; park_ticket_seasonvalue    -2.4144     0.8378  -2.882  0.00397 ** </span></span>
 <span><span class="co">#&gt; ---</span></span>
 <span><span class="co">#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span></span>
 <span><span class="co">#&gt; </span></span>
@@ -131,22 +131,22 @@
 <span><span class="co">#&gt; Multiple R-squared:  0.007723,   Adjusted R-squared:  0.007223 </span></span>
 <span><span class="co">#&gt; F-statistic: 15.44 on 2 and 3967 DF,  p-value: 2.095e-07</span></span></code></pre></div>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">agg_2018</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">date</span>, y <span class="op">=</span> <span class="va">average_diff</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">geom_point</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>color <span class="op">=</span> <span class="va">wdw_ticket_season</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">agg_2018</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">park_date</span>, y <span class="op">=</span> <span class="va">average_diff</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_point</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>color <span class="op">=</span> <span class="va">park_ticket_season</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">geom_line</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">geom_hline</span><span class="op">(</span>yintercept <span class="op">=</span> <span class="fl">0</span>, lty <span class="op">=</span> <span class="fl">2</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">facet_wrap</span><span class="op">(</span><span class="op">~</span> <span class="va">name</span>, ncol <span class="op">=</span> <span class="fl">2</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu">facet_wrap</span><span class="op">(</span><span class="op">~</span> <span class="va">attraction_name</span>, ncol <span class="op">=</span> <span class="fl">2</span><span class="op">)</span> <span class="op">+</span> </span>
 <span>  <span class="fu">labs</span><span class="op">(</span>y <span class="op">=</span> <span class="st">"Average difference in posted and actual wait time"</span>,</span>
 <span>       color <span class="op">=</span> <span class="st">"Ticket Season"</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-unnamed-chunk-6-1.png" width="100%"> We can see that there are some attractions that this holds true for moreso than others.</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://wilkelab.org/ggridges/" class="external-link">ggridges</a></span><span class="op">)</span></span>
 <span></span>
-<span><span class="fu">ggplot</span><span class="op">(</span><span class="va">agg_2018</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">average_diff</span>, y <span class="op">=</span> <span class="va">wdw_ticket_season</span>, fill <span class="op">=</span> <span class="va">wdw_ticket_season</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span><span class="fu">ggplot</span><span class="op">(</span><span class="va">agg_2018</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">average_diff</span>, y <span class="op">=</span> <span class="va">park_ticket_season</span>, fill <span class="op">=</span> <span class="va">park_ticket_season</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">geom_density_ridges</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">geom_vline</span><span class="op">(</span>xintercept <span class="op">=</span> <span class="fl">0</span>, lty <span class="op">=</span> <span class="fl">2</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">xlim</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">30</span>, <span class="fl">50</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">facet_wrap</span><span class="op">(</span><span class="op">~</span> <span class="va">name</span>, ncol <span class="op">=</span> <span class="fl">3</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu">facet_wrap</span><span class="op">(</span><span class="op">~</span> <span class="va">attraction_name</span>, ncol <span class="op">=</span> <span class="fl">3</span><span class="op">)</span> <span class="op">+</span> </span>
 <span>  <span class="fu">labs</span><span class="op">(</span>x <span class="op">=</span> <span class="st">"Average difference in posted and actual wait time"</span>,</span>
 <span>       fill <span class="op">=</span> <span class="st">"Ticket Season"</span>,</span>
 <span>       y <span class="op">=</span> <span class="st">"Ticket Season"</span><span class="op">)</span></span></code></pre></div>
