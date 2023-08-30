@@ -44,30 +44,30 @@ The `touringplans_2018` data frame contains wait time data aggregated by hour fo
 library(touringplans)
 library(tidyverse)
 touringplans_2018 %>%
-  count(name)
+  count(attraction_name)
 ```
 
 We can aggregate the hourly posted wait time data into an avarage wait time by day for each ride. 
 
 ```{r}
 agg_2018 <- touringplans_2018 %>%
-  group_by(date, name, wdw_ticket_season) %>%
-  summarise(average_diff = mean(avg_spostmin - avg_sactmin, na.rm = TRUE), .groups = "drop") %>%
+  group_by(park_date, attraction_name, park_ticket_season) %>%
+  summarise(average_diff = mean(wait_minutes_posted_avg - wait_minutes_actual_avg, na.rm = TRUE), .groups = "drop") %>%
   filter(average_diff > -300) # remove weird data points (more on this later!)
 ```
 
 On average, Disney over predicts wait times by 15 and a half minutes per day on the 14 rides included in this dataset during peak season, around 11 and a half minutes per day during regular season, and around 13 minutes per day during value season.
 ```{r}
-lm(average_diff ~ wdw_ticket_season, data = agg_2018) %>%
+lm(average_diff ~ park_ticket_season, data = agg_2018) %>%
   summary()
 ```
 
 ```{r, fig.height = 6}
-ggplot(agg_2018, aes(x = date, y = average_diff)) +
-  geom_point(aes(color = wdw_ticket_season)) +
+ggplot(agg_2018, aes(x = park_date, y = average_diff)) +
+  geom_point(aes(color = park_ticket_season)) +
   geom_line() +
   geom_hline(yintercept = 0, lty = 2) +
-  facet_wrap(~ name, ncol = 2) + 
+  facet_wrap(~ attraction_name, ncol = 2) + 
   labs(y = "Average difference in posted and actual wait time",
        color = "Ticket Season")
 ```
@@ -76,11 +76,11 @@ We can see that there are some attractions that this holds true for moreso than 
 ```{r, message = FALSE, warning = FALSE}
 library(ggridges)
 
-ggplot(agg_2018, aes(x = average_diff, y = wdw_ticket_season, fill = wdw_ticket_season)) +
+ggplot(agg_2018, aes(x = average_diff, y = park_ticket_season, fill = park_ticket_season)) +
   geom_density_ridges() +
   geom_vline(xintercept = 0, lty = 2) +
   xlim(c(-30, 50)) +
-  facet_wrap(~ name, ncol = 3) + 
+  facet_wrap(~ attraction_name, ncol = 3) + 
   labs(x = "Average difference in posted and actual wait time",
        fill = "Ticket Season",
        y = "Ticket Season")

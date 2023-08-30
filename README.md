@@ -39,9 +39,9 @@ with data wrangling.
 library(touringplans)
 library(tidyverse)
 touringplans_2018 %>%
-  count(name)
+  count(attraction_name)
 #> # A tibble: 14 × 2
-#>    name                                                      n
+#>    attraction_name                                           n
 #>    <chr>                                                 <int>
 #>  1 Alien Swirling Saucers                                 2718
 #>  2 Avatar Flight of Passage                               5147
@@ -64,8 +64,8 @@ time by day for each ride.
 
 ``` r
 agg_2018 <- touringplans_2018 %>%
-  group_by(date, name, wdw_ticket_season) %>%
-  summarise(average_diff = mean(avg_spostmin - avg_sactmin, na.rm = TRUE), .groups = "drop") %>%
+  group_by(park_date, attraction_name, park_ticket_season) %>%
+  summarise(average_diff = mean(wait_minutes_posted_avg - wait_minutes_actual_avg, na.rm = TRUE), .groups = "drop") %>%
   filter(average_diff > -300) # remove weird data points (more on this later!)
 ```
 
@@ -75,21 +75,21 @@ day on the 14 rides included in this dataset during peak season, around
 minutes per day during value season.
 
 ``` r
-lm(average_diff ~ wdw_ticket_season, data = agg_2018) %>%
+lm(average_diff ~ park_ticket_season, data = agg_2018) %>%
   summary()
 #> 
 #> Call:
-#> lm(formula = average_diff ~ wdw_ticket_season, data = agg_2018)
+#> lm(formula = average_diff ~ park_ticket_season, data = agg_2018)
 #> 
 #> Residuals:
 #>     Min      1Q  Median      3Q     Max 
 #> -82.401  -8.734  -3.066   5.487 198.772 
 #> 
 #> Coefficients:
-#>                          Estimate Std. Error t value Pr(>|t|)    
-#> (Intercept)               15.6420     0.6006  26.045  < 2e-16 ***
-#> wdw_ticket_seasonregular  -3.9076     0.7074  -5.524 3.53e-08 ***
-#> wdw_ticket_seasonvalue    -2.4144     0.8378  -2.882  0.00397 ** 
+#>                           Estimate Std. Error t value Pr(>|t|)    
+#> (Intercept)                15.6420     0.6006  26.045  < 2e-16 ***
+#> park_ticket_seasonregular  -3.9076     0.7074  -5.524 3.53e-08 ***
+#> park_ticket_seasonvalue    -2.4144     0.8378  -2.882  0.00397 ** 
 #> ---
 #> Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 #> 
@@ -99,11 +99,11 @@ lm(average_diff ~ wdw_ticket_season, data = agg_2018) %>%
 ```
 
 ``` r
-ggplot(agg_2018, aes(x = date, y = average_diff)) +
-  geom_point(aes(color = wdw_ticket_season)) +
+ggplot(agg_2018, aes(x = park_date, y = average_diff)) +
+  geom_point(aes(color = park_ticket_season)) +
   geom_line() +
   geom_hline(yintercept = 0, lty = 2) +
-  facet_wrap(~ name, ncol = 2) + 
+  facet_wrap(~ attraction_name, ncol = 2) + 
   labs(y = "Average difference in posted and actual wait time",
        color = "Ticket Season")
 ```
@@ -115,11 +115,11 @@ than others.
 ``` r
 library(ggridges)
 
-ggplot(agg_2018, aes(x = average_diff, y = wdw_ticket_season, fill = wdw_ticket_season)) +
+ggplot(agg_2018, aes(x = average_diff, y = park_ticket_season, fill = park_ticket_season)) +
   geom_density_ridges() +
   geom_vline(xintercept = 0, lty = 2) +
   xlim(c(-30, 50)) +
-  facet_wrap(~ name, ncol = 3) + 
+  facet_wrap(~ attraction_name, ncol = 3) + 
   labs(x = "Average difference in posted and actual wait time",
        fill = "Ticket Season",
        y = "Ticket Season")
