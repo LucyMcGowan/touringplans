@@ -47,5 +47,6 @@ attraction_datasets %>%
          average_wait_per_hundred) -> attraction_datasets
 
 usethis::use_data(attractions, overwrite = TRUE)
-usethis::use_data(attraction_datasets, overwrite = TRUE)
+attractions_metadata <- attraction_datasets
+usethis::use_data(attractions_metadata, overwrite = TRUE)
 

@@ -199,4 +199,6 @@ clipr::write_clip(
   glue::glue_data(dd, "#'   \\item{<tolower(var)>}{<fix_quote(desc)>, <format>}",
                   .open = "<", .close = ">")
 )
-usethis::use_data(touringplans_metadata, overwrite = TRUE)
+parks_metadata_raw <- touringplans_metadata
+
+usethis::use_data(parks_metadata_raw, overwrite = TRUE)

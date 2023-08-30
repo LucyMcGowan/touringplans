@@ -1,4 +1,4 @@
-#' Meta data for Disney Touring Plan Data
+#' Meta data for Disney Touring Plan Park Data
 #'
 #' A dataset containing daily details on Disney World Parks
 #'
@@ -188,4 +188,4 @@
 #'}
 #' @source "metadata.csv" Disney World Ride Wait Time Datasets, TouringPlans.com, August 2023,
 #' \url{https://touringplans.com/walt-disney-world/crowd-calendar#DataSets}, Accessed 28 August 2023
-"touringplans_metadata"
+"parks_metadata_raw"

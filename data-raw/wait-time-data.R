@@ -5,14 +5,14 @@ clean_data <- function(x) {
   d <- read_csv(glue("data-raw/{x}"),
                               col_types = cols(
                                 date = col_date(format = "%m/%d/%Y"),
-                                datetime = col_datetime(format = ""),
+                                wait_datetime = col_datetime(format = ""),
                                 SACTMIN = col_double(),
                                 SPOSTMIN = col_double()
                               ))
   d <- d %>%
     mutate(SACTMIN = ifelse(SACTMIN == -999, NA, SACTMIN),
            SPOSTMIN = ifelse(SPOSTMIN == -999, NA, SPOSTMIN))
-  names(d) <- c("date", "datetime", "wait_minutes_actual", "wait_minutes_posted")
+  names(d) <- c("park_date", "wait_datetime", "wait_minutes_actual", "wait_minutes_posted")
   assign(gsub(".csv", "", x), d, envir = .GlobalEnv)
 }
 

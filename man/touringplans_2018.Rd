@@ -7,7 +7,7 @@
 \format{
 A data frame with 66,492 rows and 17 variables:
 \describe{
-\item{date}{Park Day (not actual date stamp of the wait time, since some are after midnight), Date}
+\item{park_date}{Park Day (not actual date stamp of the wait time, since some are after midnight), Date}
 \item{wait_hour}{Hour of recorded wait time, numeric}
 \item{attraction_name}{Disney's official attraction name, alphanumeric}
 \item{wait_minutes_actual_avg}{Average actual Wait Time (in minutes), numeric}
@@ -20,9 +20,9 @@ A data frame with 66,492 rows and 17 variables:
 \item{park_close}{Closing time for park where attraction is located, HH:MM}
 \item{park_extra_magic_morning}{Extra magic hour morning, Boolean}
 \item{park_extra_magic_evening}{Extra magic hour evening, Boolean}
-\item{day_ticket_season}{Walt Disney World Single Day Price Type, alphanumeric}
-\item{day_temperature_average}{Historical Average Temperature, numeric}
-\item{day_temperature_high}{Historical High Temperature, numeric}
+\item{park_ticket_season}{Walt Disney World Single Day Price Type, alphanumeric}
+\item{park_temperature_average}{Historical Average Temperature, numeric}
+\item{park_temperature_high}{Historical High Temperature, numeric}
 \item{attraction_short_name}{Short name, alphanumeric}
 }
 }

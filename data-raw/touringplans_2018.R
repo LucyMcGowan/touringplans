@@ -5,9 +5,9 @@ library(glue)
 
 group_hourly <- function(x, y) {
   x %>%
-    filter(year(date) == 2018) %>%
-    mutate(hour = hour(datetime)) %>%
-    group_by(date, hour) %>%
+    filter(year(park_date) == 2018) %>%
+    mutate(hour = hour(wait_datetime)) %>%
+    group_by(park_date, hour) %>%
     summarise(wait_minutes_actual_avg = mean(wait_minutes_actual, na.rm = TRUE),
               wait_minutes_posted_avg = mean(wait_minutes_posted, na.rm = TRUE), .groups = "drop") %>%
     mutate(wait_minutes_posted_avg = ifelse(is.nan(wait_minutes_posted_avg), NA, wait_minutes_posted_avg),
@@ -28,10 +28,10 @@ n <- Hmisc::Cs(alien_saucers, dinosaur, expedition_everest, flight_of_passage,
 d <- map2(d, n, group_hourly)
 
 d <- bind_rows(d) %>%
-  left_join(touringplans_datasets, by = "dataset_name")
+  left_join(attraction_datasets, by = "dataset_name")
 
 d %>%
-  left_join(touringplans_metadata, by = "date") %>%
+  left_join(parks_metadata, by = c("park_date" = "date")) %>%
   mutate(
     open = case_when(
       grepl("Hollywood", park) ~ hsopen,
@@ -57,7 +57,7 @@ d %>%
       grepl("Animal", park) ~ akemheve,
       grepl("Magic", park) ~ mkemheve,
     )) %>%
-  select(date, hour, name, wait_minutes_actual_avg, wait_minutes_posted_avg, average_wait_per_hundred,
+  select(park_date, hour, name, wait_minutes_actual_avg, wait_minutes_posted_avg, average_wait_per_hundred,
          duration, park, land, open, close, extra_magic_morning,
          extra_magic_evening, wdw_ticket_season, wdwmeantemp, wdwmaxtemp, short_name) |>
   rename(
@@ -71,9 +71,9 @@ d %>%
     park_close = close,
     park_extra_magic_morning = extra_magic_morning,
     park_extra_magic_evening = extra_magic_evening,
-    day_ticket_season = wdw_ticket_season,
-    day_temperature_high = wdwmaxtemp,
-    day_temperature_average = wdwmeantemp,
+    park_ticket_season = wdw_ticket_season,
+    park_temperature_high = wdwmaxtemp,
+    park_temperature_average = wdwmeantemp,
     attraction_short_name = short_name
     ) -> touringplans_2018
 

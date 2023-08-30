@@ -7,8 +7,8 @@
 \format{
 A data frame with 321,631 rows and 4 variables:
 \describe{
-\item{date}{Park Day (not actual date stamp of the wait time, since some are after midnight), Date}
-\item{datetime}{date-time stamp of wait time,	YYYY-MM-DD HH:MM:SS}
+\item{park_date}{Park Day (not actual date stamp of the wait time, since some are after midnight), Date}
+\item{wait_datetime}{date-time stamp of wait time,	YYYY-MM-DD HH:MM:SS}
 \item{wait_minutes_actual}{Actual Wait Time (in minutes), numeric}
 \item{wait_minutes_posted}{Standby Posted Wait Time (in minutes),	numeric}
 }

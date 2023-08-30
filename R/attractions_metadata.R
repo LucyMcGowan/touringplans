@@ -15,4 +15,4 @@
 #'   }
 #' @source "entities.csv" Disney World Ride Wait Time Datasets, TouringPlans.com, August 2023,
 #' \url{https://touringplans.com/walt-disney-world/crowd-calendar#DataSets}, Accessed 28 August 2023
-"attraction_datasets"
+"attractions_metadata"
