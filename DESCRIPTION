@@ -1,6 +1,6 @@
 Package: touringplans
 Title: Walt Disney World Park Data
-Version: 0.0.1
+Version: 0.0.1.9000
 Authors@R: 
     person(given = "Lucy",
            family = "D'Agostino McGowan",
